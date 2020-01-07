@@ -1,0 +1,20 @@
+{
+	"name": "Argo Cloudflare Wlatic Test",
+	"version": "0.1",
+	"slug": "argocloudflare",
+	"description": "Argo for Home Assistant",
+	"url": "https://github.com/wlatic/docker-cloudflare-argo",
+	"arch": ["armv7"],
+	"startup": "services",
+	"boot": "auto",
+	"map": ["ssl:rw"],
+	"options": {
+		
+			"hostname": "hostname",
+			"haurl": "http://hassio:8123"
+	},
+	"schema": {
+			"hostname": "str",
+			"haurl": "str"
+	}
+}
