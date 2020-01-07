@@ -11,7 +11,7 @@
 	"options": {
 		
 			"hostname": "hostname",
-			"haurl": "http://hassio:8123"
+			"haurl": "http://<localhostname>:8123"
 	},
 	"schema": {
 			"hostname": "str",
