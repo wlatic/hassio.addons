@@ -20,7 +20,7 @@ RUN \
  && if [[ "${BUILD_ARCH}" = "armhf" ]]; then ARCH="arm"; fi \
  && if [[ "${BUILD_ARCH}" = "armv7" ]]; then ARCH="arm"; fi \
  && if [[ "${BUILD_ARCH}" = "i386" ]]; then ARCH="386"; fi \
- && curl https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-arm.tgz --output cloudflared.tgz
+ && curl https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-${ARCH}.tgz --output cloudflared.tgz
  
  Run \
  tar xzf cloudflared.tgz 
