@@ -1,11 +1,11 @@
 {
 	"name": "Argo Cloudflare Wlatic Test",
-	"version": "0.1",
+	"version": "0.2",
 	"slug": "argocloudflare",
 	"description": "Argo for Home Assistant. You'll need to place your cert.pem file into your Home Assistant Config folder under the www directory for this to work.",
 	"url": "https://github.com/wlatic/docker-cloudflare-argo",
 	"arch": ["armv7"],
-	"startup": "services",
+	"startup": "application",
 	"boot": "auto",
 	"map": ["ssl:rw"],
 	"options": {
