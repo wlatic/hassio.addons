@@ -15,3 +15,4 @@ The initial config has hostname and haurl, however there is also hostname2/haurl
 
 If you are not using hostname2 and hostname3 make sure to remove them from your config so that the two argo tunnels are not trying to spin up!
 
+A pause of 30 seconds happens on tunnel1, 35 seconds on tunnel2 and 40 seconds on tunnel3, to ensure your urls are online by the time it spins up.
