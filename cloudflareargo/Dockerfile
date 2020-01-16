@@ -19,8 +19,7 @@ RUN \
  && curl -L -s \
  "https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-${ARCH}.tgz" \
  | tar xzf - -C /opt/ \
- && chmod +x  /opt/cloudflared \
- && mv /config/www/argo.pem /etc/cloudflared/cert.pem
+ && chmod +x  /opt/cloudflared 
 
 COPY rootfs /
 
