@@ -4,7 +4,10 @@
 # Starts Node-RED
 # ==============================================================================
 declare -a options
+declare certificate 
+
+certificate=$(bashio::config 'certificate')
 sleep 30
 bashio::log.info "Starting CloudFlare Argo"
 
-exec /opt/cloudflared --config /etc/cloudflared/1.yml
+exec /opt/cloudflared --config /etc/cloudflared/1.yml --origincert ${certificate}
