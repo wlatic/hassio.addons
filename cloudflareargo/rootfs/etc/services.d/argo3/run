@@ -9,5 +9,5 @@ sleep 40
 
 if bashio::config.has_value 'hostname3'; then
     bashio::log.info "Starting CloudFlare Argo Tunnel 3"
-    exec /opt/cloudflared --config /etc/cloudflared/3.yml --no-autoupdate
+    exec /opt/cloudflared --config /etc/cloudflared/3.yml
 fi
