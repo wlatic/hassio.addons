@@ -19,10 +19,6 @@
 		
 			"hostname": "hostname",
 			"haurl": "http://hassio:8123"
-			"hostname2": "remove if not used",
-			"haurl2": "remove if not used",
-			"hostname3": "remove if not used",
-			"haurl3": "remove if not used"
 	},
 	"schema": false
 }
