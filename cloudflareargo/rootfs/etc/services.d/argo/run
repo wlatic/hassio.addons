@@ -4,11 +4,7 @@
 # Starts Node-RED
 # ==============================================================================
 declare -a options
-sleep 2m
+sleep 30
 bashio::log.info "Starting CloudFlare Argo"
 
-if bashio::debug; then
-    option+=(--verbose)
-fi
-
-exec /opt/cloudflared
+exec /opt/cloudflared --config /etc/cloudflared/1.yml --no-autoupdate
