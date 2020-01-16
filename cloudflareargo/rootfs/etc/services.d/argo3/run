@@ -4,10 +4,12 @@
 # Starts Node-RED
 # ==============================================================================
 declare -a options
+declare certificate3
 sleep 40
 
 
 if bashio::config.has_value 'hostname3'; then
+    certificate3=$(bashio::config 'certificate3')
     bashio::log.info "Starting CloudFlare Argo Tunnel 3"
-    exec /opt/cloudflared --config /etc/cloudflared/3.yml
+    exec /opt/cloudflared --config /etc/cloudflared/3.yml --origincert ${certificate3}
 fi
