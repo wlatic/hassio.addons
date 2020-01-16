@@ -22,7 +22,7 @@
 	"options": {
 		
 			"hostname": "hostname",
-			"haurl": "http://hassio:8123",
+			"url": "http://hassio:8123",
 			"certificate": "/config/cert/argo.pem"
 	},
 	"schema": false
