@@ -7,4 +7,4 @@ declare -a options
 sleep 30
 bashio::log.info "Starting CloudFlare Argo"
 
-exec /opt/cloudflared --config /etc/cloudflared/1.yml --no-autoupdate
+exec /opt/cloudflared --config /etc/cloudflared/1.yml
