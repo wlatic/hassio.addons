@@ -1,0 +1,4 @@
+0.1 hacky mess!
+0.2 Now able to bring up a network and keep it going based on settings within the hassos config.
+0.3 Now able to bring up 3 tunnels in total and ignores 2 and 3 if they are not set within config. Put a delay on tunnels being brought up so that services have time to come online, this is hacky but not sure how to wait for an external port.
+0.4 Certificates are now defined within the config for all tunnels, changed haurl value to just be "url" as people may not just be using this for home assistant (For example the unifi addon could be exposed).
