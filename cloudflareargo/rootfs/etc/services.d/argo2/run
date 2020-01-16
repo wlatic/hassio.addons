@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Community Hass.io Add-ons: Node-RED
+# Starts Node-RED
+# ==============================================================================
+declare -a options
+sleep 35
+
+if bashio::config.has_value 'hostname2'; then
+    bashio::log.info "Starting CloudFlare Argo Tunnel 2"
+    exec /opt/cloudflared --config /etc/cloudflared/2.yml --no-autoupdate
+fi
