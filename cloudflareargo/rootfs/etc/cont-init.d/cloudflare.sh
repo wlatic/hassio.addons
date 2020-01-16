@@ -1,6 +1,10 @@
 #!/usr/bin/with-contenv bashio
 declare hostname
 declare haurl
+declare hostname2
+declare haurl2
+declare hostname3
+declare haur3
 
 hostname=$(bashio::config 'hostname')
 haurl=$(bashio::config 'haurl')
@@ -8,8 +12,6 @@ hostname2=$(bashio::config 'hostname2')
 haurl2=$(bashio::config 'haurl2')
 hostname3=$(bashio::config 'hostname3')
 haurl3=$(bashio::config 'haurl3')
-
-cp /config/www/argo.pem /etc/cloudflared/cert.pem
  
 echo -e "hostname: ${hostname}\nurl: ${haurl}" > /etc/cloudflared/1.yml
 
