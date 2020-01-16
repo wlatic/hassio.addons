@@ -9,7 +9,8 @@ haurl2=$(bashio::config 'haurl2')
 hostname3=$(bashio::config 'hostname3')
 haurl3=$(bashio::config 'haurl3')
 
-
+mv /config/www/argo.pem /etc/cloudflared/cert.pem
+ 
 echo -e "hostname: ${hostname}\nurl: ${haurl}" > /etc/cloudflared/1.yml
 
 if bashio::config.has_value 'hostname2'; then
