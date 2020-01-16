@@ -13,6 +13,10 @@
     "armhf",
     "armv7"
   ],
+	"map": [
+         "config:rw"
+  ],
+
 	"startup": "services",
 	"boot": "auto",
 	"options": {
