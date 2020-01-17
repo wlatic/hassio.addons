@@ -41,8 +41,8 @@ LABEL \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="ArgoCloudflare" \
     org.label-schema.schema-version="0.1" \
-    org.label-schema.url="https://community.home-assistant.io/t/community-hass-io-add-on-adguard-home/90684?u=frenck" \
-    org.label-schema.usage="https://github.com/hassio-addons/addon-adguard-home/tree/master/README.md" \
+    org.label-schema.url="" \
+    org.label-schema.usage="https://raw.githubusercontent.com/wlatic/hassio.addons/master/cloudflareargo/readme.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
     org.label-schema.vcs-url="https://github.com/wlatic/docker-cloudflare-argo" \
     org.label-schema.vendor="Community Hass.io Add-ons"
