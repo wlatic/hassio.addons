@@ -2,7 +2,7 @@
 
 Setup Cloudflare Argo containers with ease!
 
-[![GitHub Release][releases-shield]][releases]
+[releases]
 ![Project Stage][project-stage-shield]
 [![License][license-shield]](LICENSE.md)
 
@@ -60,7 +60,7 @@ Even if you are using the same .pem file for all tunnels you'll need to specify 
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-vscode.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2020.svg
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
+[project-stage-shield]: https://img.shields.io/badge/Project%20Stage-Development-yellowgreen.svg
 [reddit]: https://reddit.com/r/homeassistant
 [releases]: https://github.com/wlatic/hassio.addons/addon-cloudflare-argo/releases
 [repository]: https://github.com/wlatic/hassio.addons/repository
