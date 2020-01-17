@@ -42,7 +42,7 @@ LABEL \
     org.label-schema.name="ArgoCloudflare" \
     org.label-schema.schema-version="0.7" \
     org.label-schema.url="" \
-    org.label-schema.usage="https://raw.githubusercontent.com/wlatic/hassio.addons/cloudflareargo/tree/master/README.md" \
+    org.label-schema.usage="https://github.com/wlatic/hassio.addons/tree/master/addon-cloudflare-argo/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
     org.label-schema.vcs-url="https://github.com/wlatic/docker-cloudflare-argo" \
     org.label-schema.vendor="Community Hass.io Add-ons"
