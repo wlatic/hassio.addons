@@ -8,24 +8,13 @@ declare certificate3
 declare url3
 
 
+url3=$(bashio::config 'url3')
+certificate3=$(bashio::config 'certificate3')
+
+
 if bashio::config.has_value 'hostname3'; then
-    url3=$(bashio::config 'url3')
-    certificate3=$(bashio::config 'certificate3')
-    bashio::log.info "Starting CloudFlare Argo Tunnel 3"
-#Check URL
-    attempt_counter=0
-    max_attempts=150
-until $(curl --output /dev/null --silent --head --fail ${url3}); do
-    if [ ${attempt_counter} -eq ${max_attempts} ];then
-      echo "Max attempts reached"
-      exit 1
-    fi
+bashio::log.info "Starting CloudFlare Argo Tunnel 3"
 
-    printf '.'
-    attempt_counter=$(($attempt_counter+1))
-    sleep 5
-done
 # / Check URL
-
-    exec /opt/cloudflared --config /etc/cloudflared/3.yml --origincert ${certificate3}
+exec /opt/cloudflared --config /etc/cloudflared/3.yml --origincert ${certificate3} --no-tls-verify --proxy-connect-timeout 150s
 fi
