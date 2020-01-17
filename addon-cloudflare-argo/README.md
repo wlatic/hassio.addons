@@ -44,3 +44,25 @@ https://www.cloudflare.com/a/warp
 By default a .pem file from Cloudflare only allows access from a single domain name, if you want multiple domains you'll need multiple .pem files.
 
 Even if you are using the same .pem file for all tunnels you'll need to specify certificate2 and certificate3.
+
+[aarch64-shield]: https://img.shields.io/badge/aarch64-no-red.svg
+[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
+[armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
+[armv7-shield]: https://img.shields.io/badge/armv7-no-red.svg
+[commits]: https://github.com/wlatic/hassio.addons/addon-cloudflare-argo/commits/master
+[contributors]: https://github.com/wlatic/hassio.addons/addon-cloudflare-argo/graphs/contributors
+[forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
+[frenck]: https://github.com/wlatic
+[gitlabci]: https://gitlab.com/wlatic/hassio.addons/addon-cloudflare-argo/pipelines
+[home-assistant]: https://home-assistant.io
+[i386-shield]: https://img.shields.io/badge/i386-no-red.svg
+[issue]: https://github.com/wlatic/hassio.addons/addon-cloudflare-argo/issues
+[keepchangelog]: http://keepachangelog.com/en/1.0.0/
+[license-shield]: https://img.shields.io/github/license/hassio-addons/addon-vscode.svg
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2020.svg
+[project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
+[reddit]: https://reddit.com/r/homeassistant
+[releases]: https://github.com/wlatic/hassio.addons/addon-cloudflare-argo/releases
+[repository]: https://github.com/wlatic/hassio.addons/repository
+[semver]: http://semver.org/spec/v2.0.0.htm
+[ubuntu-packages]: https://packages.ubuntu.com
