@@ -2,6 +2,16 @@
 
 Setup Cloudflare Argo containers with ease!
 
+[![GitHub Release][releases-shield]][releases]
+![Project Stage][project-stage-shield]
+[![License][license-shield]](LICENSE.md)
+
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports armhf Architecture][armhf-shield]
+![Supports armv7 Architecture][armv7-shield]
+![Supports i386 Architecture][i386-shield]
+
 ## About
 
 This is a very hacky setup of Cloudflare argo that helps people access their Home Assistant and other HassOS addons via a public URL.
