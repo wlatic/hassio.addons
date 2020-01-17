@@ -55,7 +55,7 @@ Even if you are using the same .pem file for all tunnels you'll need to specify 
 [frenck]: https://github.com/wlatic
 [gitlabci]: https://gitlab.com/wlatic/hassio.addons/addon-cloudflare-argo/pipelines
 [home-assistant]: https://home-assistant.io
-[i386-shield]: https://img.shields.io/badge/i386-no-red.svg
+[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/wlatic/hassio.addons/addon-cloudflare-argo/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-vscode.svg
