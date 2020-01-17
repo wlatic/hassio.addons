@@ -1,21 +1,38 @@
-This addon is designed for HASSOS and allows you to run 3 different CloudFlare Argo tunnels.
+# Community Hass.io Add-ons: CloudFlare Argo
 
-You'll need to download a certificate from your Cloudflare account via https://www.cloudflare.com/a/warp
+[![Release][release-shield]][release] ![Project Stage][project-stage-shield] ![Project Maintenance][maintenance-shield]
 
-Place the certificate into your /config folder (ideally within a sub folder) and you can then define this within the config.
+Setup Cloudflare Argo containers with ease!
 
-The initial config has hostname and haurl, however there is also hostname2/haurl2 and hostname3/haurl3 availble to use:
+## About
 
-  "hostname": "sub.domain.com",
-  "url": "http://hostname:8123",
-  "certificate": "/config/ssl/argo.pem",
-  "hostname2": "sub2.domain.com",
-  "url2": "http://hostname:8443",
-  "certificate2": "/config/ssl/argo.pem",
-  "hostname3": "sub3.domain.com",
-  "url3": "http://hostname:8080"
-  "certificate3": "/config/ssl/argo.pem",
+This is a very hacky setup of Cloudflare argo that helps people access their Home Assistant and other HassOS addons via a public URL.
 
-If you are not using hostname2 and hostname3 make sure to remove them from your config so that the two argo tunnels are not trying to spin up!
+Cloudflare Argo uses a tunnel and therefore bypasses any need for a NAT'd public IP (LTE connections) or opening firewall ports etc.
 
-A pause of 30 seconds happens on tunnel1, 35 seconds on tunnel2 and 40 seconds on tunnel3, to ensure your urls are online by the time it spins up.
+## CONFIG
+
+The basic config enables 1 Cloudflare Argo tunnel using:
+
+Hostname (The hostname to pass to Cloudflare)
+URL (The local url you want to put online)
+Certificate (local path to the Cloudflare Argo Certificate)
+
+The addon supports 3 tunnels using the additional configuration values:
+hostname2
+url2
+certificate2
+
+hostname3
+url3
+certificate3
+
+If you do not configure tunnel 2 and 3 it will not run.
+
+You'll need to sign up for Argo with Cloudflare directly and generate an SSL certificate at the following url:
+https://www.cloudflare.com/a/warp
+
+## Multiple Domains
+By default a .pem file from Cloudflare only allows access from a single domain name, if you want multiple domains you'll need multiple .pem files.
+
+Even if you are using the same .pem file for all tunnels you'll need to specify certificate2 and certificate3.
