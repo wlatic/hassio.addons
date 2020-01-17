@@ -7,23 +7,13 @@ declare -a options
 declare certificate2
 declare url2
 
-if bashio::config.has_value 'hostname2'; then
-    url2=$(bashio::config 'url2')
-    certificate2=$(bashio::config 'certificate2')
-    bashio::log.info "Starting CloudFlare Argo Tunnel 2"
-   #Check URL
-    attempt_counter=0
-    max_attempts=150
-until $(curl --output /dev/null --silent --head --fail ${url2}); do
-    if [ ${attempt_counter} -eq ${max_attempts} ];then
-      echo "Max attempts reached"
-      exit 1
-    fi
 
-    printf '.'
-    attempt_counter=$(($attempt_counter+1))
-    sleep 5
-done
+url2=$(bashio::config 'url2')
+certificate2=$(bashio::config 'certificate2')
+
+if bashio::config.has_value 'hostname2'; then
+bashio::log.info "Starting CloudFlare Argo Tunnel 2"
+
 # / Check URL
-    exec /opt/cloudflared --config /etc/cloudflared/2.yml  --origincert ${certificate2}
+exec /opt/cloudflared --config /etc/cloudflared/2.yml --origincert ${certificate2} --no-tls-verify --proxy-connect-timeout 150s
 fi
