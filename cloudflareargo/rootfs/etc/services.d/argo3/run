@@ -5,11 +5,13 @@
 # ==============================================================================
 declare -a options
 declare certificate3
-sleep 40
+declare url3
 
 
 if bashio::config.has_value 'hostname3'; then
+    url3=$(bashio::config 'url3')
     certificate3=$(bashio::config 'certificate3')
     bashio::log.info "Starting CloudFlare Argo Tunnel 3"
+    timeout 300 bash -c 'while [[ "$(curl --insecure -s -o /dev/null -w ''%{http_code}'' ${url3})" != "200" ]]; do sleep 5; done'
     exec /opt/cloudflared --config /etc/cloudflared/3.yml --origincert ${certificate3}
 fi
