@@ -5,10 +5,14 @@
 # ==============================================================================
 declare -a options
 declare certificate2
-sleep 35
+declare url
+
+haurl=$(bashio::config 'url')
 
 if bashio::config.has_value 'hostname2'; then
+    url2=$(bashio::config 'url')
     certificate2=$(bashio::config 'certificate2')
     bashio::log.info "Starting CloudFlare Argo Tunnel 2"
+    timeout 300 bash -c 'while [[ "$(curl --insecure -s -o /dev/null -w ''%{http_code}'' ${url2})" != "200" ]]; do sleep 5; done'
     exec /opt/cloudflared --config /etc/cloudflared/2.yml  --origincert ${certificate2}
 fi
