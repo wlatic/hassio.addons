@@ -4,3 +4,4 @@
 0.4 Certificates are now defined within the config for all tunnels, changed haurl value to just be "url" as people may not just be using this for home assistant (For example the unifi addon could be exposed).
 0.5 tried adding url verification, but it didnt work well.
 0.6 using cloudflared to check the connection works much better and is now setup.
+0.7 added readme for Hasos
