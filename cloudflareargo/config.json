@@ -5,7 +5,7 @@
 	"description": "Argo for Home Assistant",
 	"url": "https://github.com/wlatic/hassio.addons/blob/master/cloudflareargo/readme.md",
 	"ingress": false,
-	"panel_icon": "mdi:file-document-box-outline",
+	"panel_icon": "mdi:docker",
 	"homeassistant": "0.101.0b0",
 	"arch": [
     "aarch64",
