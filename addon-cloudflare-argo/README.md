@@ -2,7 +2,7 @@
 
 Setup Cloudflare Argo containers with ease!
 
-[releases]
+
 ![Project Stage][project-stage-shield]
 [![License][license-shield]](LICENSE.md)
 
