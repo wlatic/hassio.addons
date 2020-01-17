@@ -45,10 +45,10 @@ By default a .pem file from Cloudflare only allows access from a single domain n
 
 Even if you are using the same .pem file for all tunnels you'll need to specify certificate2 and certificate3.
 
-[aarch64-shield]: https://img.shields.io/badge/aarch64-no-red.svg
+[aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
-[armv7-shield]: https://img.shields.io/badge/armv7-no-red.svg
+[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
+[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [commits]: https://github.com/wlatic/hassio.addons/addon-cloudflare-argo/commits/master
 [contributors]: https://github.com/wlatic/hassio.addons/addon-cloudflare-argo/graphs/contributors
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
