@@ -1,7 +1,5 @@
 # Community Hass.io Add-ons: CloudFlare Argo
 
-[![Release][release-shield]][release] ![Project Stage][project-stage-shield] ![Project Maintenance][maintenance-shield]
-
 Setup Cloudflare Argo containers with ease!
 
 ## About
