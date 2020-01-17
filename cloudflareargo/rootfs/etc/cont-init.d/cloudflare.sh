@@ -7,11 +7,11 @@ declare hostname3
 declare ur3
 
 hostname=$(bashio::config 'hostname')
-haurl=$(bashio::config 'url')
+url=$(bashio::config 'url')
 hostname2=$(bashio::config 'hostname2')
-haurl2=$(bashio::config 'url2')
+url2=$(bashio::config 'url2')
 hostname3=$(bashio::config 'hostname3')
-haurl3=$(bashio::config 'url3')
+url3=$(bashio::config 'url3')
  
 echo -e "hostname: ${hostname}\nurl: $url}" > /etc/cloudflared/1.yml
 
