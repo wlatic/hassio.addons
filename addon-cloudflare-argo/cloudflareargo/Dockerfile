@@ -8,13 +8,15 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Setup base
 # hadolint ignore=DL3003
 #ARG BUILD_ARCH=amd64
-ARG BUILD_ARCH
+ARG BUILD_ARCHARG 
+ARG ARCH
 
-RUN if [[ "${BUILD_ARCH}" = "aarch64" ]]; then echo "aarch64!"; fi
-RUN if [[ "${BUILD_ARCH}" = "amd64" ]]; then echo "amd64!"; fi
-RUN if [[ "${BUILD_ARCH}" = "armhf" ]]; then echo "armhf!"; fi
-RUN if [[ "${BUILD_ARCH}" = "armv7" ]]; then echo "armv7!"; fi
-RUN if [[ "${BUILD_ARCH}" = "i386" ]]; then echo "i386!"; fi
+RUN if [[ "${BUILD_ARCH}" = "aarch64" ]]; then ARCH="arm64!"; fi
+RUN if [[ "${BUILD_ARCH}" = "amd64" ]]; then ARCH="amd64!"; fi
+RUN if [[ "${BUILD_ARCH}" = "armhf" ]]; then ARCH="armhf!"; fi
+RUN if [[ "${BUILD_ARCH}" = "armv7" ]]; then ARCH="armv7!"; fi
+RUN if [[ "${BUILD_ARCH}" = "i386" ]]; then ARCH="i386!"; fi
+RUN echo "version: ${BUILD_ARCH} "
 
 RUN \
  if [[ "${BUILD_ARCH}" = "aarch64" ]]; then ARCH="arm64"; fi \
