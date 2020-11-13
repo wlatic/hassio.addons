@@ -20,8 +20,8 @@ RUN \
     && if [[ "${BUILD_ARCH}" = "i386" ]]; then LINKARCH="https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-386.tgz"; fi \
     \
  && mkdir /etc/cloudflared \
- && if [[ "${BUILD_ARCH}" = "aarch64" ]] ; then curl -L -s "${LINKARCH}" > /opt/cloudflared ; \
- && else curl -L -s "${LINKARCH}" | tar xzf - -C /opt/ ; fi \
+ && if [[ "${BUILD_ARCH}" = "aarch64" ]]; then curl -L -s "${LINKARCH}" > /opt/cloudflared ; \
+    else curl -L -s "${LINKARCH}" | tar xzf - -C /opt/ ; fi \
  #&& curl -L -s "${LINKARCH}" > /opt/cloudflared \
  #| tar xzf - -C /opt/ \
  && chmod +x  /opt/cloudflared 
