@@ -24,7 +24,7 @@ RUN \
     else curl -L -s "${LINKARCH}" | tar xzf - -C /opt/ ; fi \
  #&& curl -L -s "${LINKARCH}" > /opt/cloudflared \
  #| tar xzf - -C /opt/ \
- && chmod +x  /opt/cloudflared 
+ && chmod +x  /opt/cloudflared \
  && ls /opt/cloudflared 
 
 COPY rootfs /
