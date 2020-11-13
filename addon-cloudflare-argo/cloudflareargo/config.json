@@ -3,7 +3,7 @@
 	"version": "0.7",
 	"slug": "argocloudflare",
 	"description": "Argo for Home Assistant",
-	"url": "https://github.com/wlatic/hassio.addons/blob/master/cloudflareargo/readme.md",
+	"url": "https://github.com/royvinz/hassio.addons/blob/master/cloudflareargo/readme.md",
 	"ingress": false,
 	"panel_icon": "mdi:docker",
 	"homeassistant": "0.104.0",
@@ -11,7 +11,8 @@
     "aarch64",
     "amd64",
     "armhf",
-    "armv7"
+    "armv7",
+    "i386"
   ],
 	"map": [
          "config:rw"
