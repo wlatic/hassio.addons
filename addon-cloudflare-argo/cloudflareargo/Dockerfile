@@ -12,11 +12,11 @@ ARG BUILD_ARCH
 ARG ARCH
 
 RUN if [[ "${BUILD_ARCH}" = "aarch64" ]]; then ARCH="arm64!"; echo "version: ${ARCH} "; fi \
-      if [[ "${BUILD_ARCH}" = "amd64" ]]; then ${ARCH}="amd64!"; echo "version: ${ARCH} "; fi \
-      if [[ "${BUILD_ARCH}" = "armhf" ]]; then ${ARCH}="armhf!"; echo "version: ${ARCH} "; fi \
-      if [[ "${BUILD_ARCH}" = "armv7" ]]; then ${ARCH}="armv7!"; echo "version: ${ARCH} "; fi \
-      if [[ "${BUILD_ARCH}" = "i386" ]]; then ${ARCH}="i386!"; echo "version: ${ARCH} "; fi \
-      echo "version: ${ARCH} "
+      && if [[ "${BUILD_ARCH}" = "amd64" ]]; then ${ARCH}="amd64!"; echo "version: ${ARCH} "; fi \
+      && if [[ "${BUILD_ARCH}" = "armhf" ]]; then ${ARCH}="armhf!"; echo "version: ${ARCH} "; fi \
+      && if [[ "${BUILD_ARCH}" = "armv7" ]]; then ${ARCH}="armv7!"; echo "version: ${ARCH} "; fi \
+      && if [[ "${BUILD_ARCH}" = "i386" ]]; then ${ARCH}="i386!"; echo "version: ${ARCH} "; fi \
+      && echo "version: ${ARCH} "
 
 RUN \
  if [[ "${BUILD_ARCH}" = "aarch64" ]]; then ARCH="arm64"; fi \
