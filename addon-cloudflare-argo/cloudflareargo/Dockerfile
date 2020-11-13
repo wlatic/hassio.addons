@@ -1,5 +1,5 @@
-ARG BUILD_FROM=hassioaddons/ubuntu-base:4.0.3
-#ARG BUILD_FROM
+#ARG BUILD_FROM=hassioaddons/ubuntu-base:4.0.3
+ARG BUILD_FROM=hassioaddons/base-amd64:latest
 FROM $BUILD_FROM
 
 # Set shell
@@ -11,6 +11,17 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ARG BUILD_ARCH
 ARG LINKARCH
 
+
+RUN \
+        if [[ "${BUILD_ARCH}" = "aarch64" ]]; then LINKARCH="https://github.com/cloudflare/cloudflared/releases/download/2020.8.2/cloudflared-linux-arm64"; fi \
+        && if [[ "${BUILD_ARCH}" = "amd64" ]]; then LINKARCH="https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.tgz"; fi \
+        && if [[ "${BUILD_ARCH}" = "armhf" ]]; then LINKARCH="https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-arm.tgz"; fi \
+        && if [[ "${BUILD_ARCH}" = "armv7" ]]; then LINKARCH="https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-arm.tgz"; fi \
+        && if [[ "${BUILD_ARCH}" = "i386" ]]; then LINKARCH="https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-386.tgz"; fi \
+        && echo version: "${BUILD_ARCH}"  path: "${LINKARCH}" \
+        && curl -L -o /opt/cloudflared -s "${LINKARCH}" \
+        && chmod +x  /opt/cloudflared \
+        && ls -l /opt/cloudflared
 
 RUN \
  if [[ "${BUILD_ARCH}" = "aarch64" ]]; then LINKARCH="https://github.com/cloudflare/cloudflared/releases/download/2020.8.2/cloudflared-linux-arm64"; fi \
@@ -25,7 +36,7 @@ RUN \
  #&& curl -L -s "${LINKARCH}" > /opt/cloudflared \
  #| tar xzf - -C /opt/ \
  && chmod +x  /opt/cloudflared \
- && ls /opt/cloudflared 
+ && ls /opt/cloudflared
 
 COPY rootfs /
 
