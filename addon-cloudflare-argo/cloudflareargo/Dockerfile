@@ -9,25 +9,18 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # hadolint ignore=DL3003
 #ARG BUILD_ARCH=amd64
 ARG BUILD_ARCH
-ARG ARCH
+ARG LINKARCH
 
-RUN if [[ "${BUILD_ARCH}" = "aarch64" ]]; then ARCH="arm64!"; echo "version: ${ARCH} "; fi \
-      && if [[ "${BUILD_ARCH}" = "amd64" ]]; then ${ARCH}="amd64!"; echo "version: ${ARCH} "; fi \
-      && if [[ "${BUILD_ARCH}" = "armhf" ]]; then ${ARCH}="armhf!"; echo "version: ${ARCH} "; fi \
-      && if [[ "${BUILD_ARCH}" = "armv7" ]]; then ${ARCH}="armv7!"; echo "version: ${ARCH} "; fi \
-      && if [[ "${BUILD_ARCH}" = "i386" ]]; then ${ARCH}="i386!"; echo "version: ${ARCH} "; fi \
-      && echo "pkg: https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-${ARCH}.tgz "
 
 RUN \
- if [[ "${BUILD_ARCH}" = "aarch64" ]]; then ARCH="arm64"; fi \
-    && if [[ "${BUILD_ARCH}" = "amd64" ]]; then ARCH="amd64"; fi \
-    && if [[ "${BUILD_ARCH}" = "armhf" ]]; then ARCH="arm"; fi \
-    && if [[ "${BUILD_ARCH}" = "armv7" ]]; then ARCH="arm"; fi \
-    && if [[ "${BUILD_ARCH}" = "i386" ]]; then ARCH="386"; fi \
+ if [[ "${BUILD_ARCH}" = "aarch64" ]]; then LINKARCH="https://github.com/cloudflare/cloudflared/releases/download/2020.8.2/cloudflared-linux-arm64"; fi \
+    && if [[ "${BUILD_ARCH}" = "amd64" ]]; then LINKARCH="https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.tgz"; fi \
+    && if [[ "${BUILD_ARCH}" = "armhf" ]]; then LINKARCH="https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-arm.tgz"; fi \
+    && if [[ "${BUILD_ARCH}" = "armv7" ]]; then LINKARCH="https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-arm.tgz"; fi \
+    && if [[ "${BUILD_ARCH}" = "i386" ]]; then LINKARCH="https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-386.tgz"; fi \
     \
  && mkdir /etc/cloudflared \
- && curl -L -s \
- "https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-${ARCH}.tgz" \
+ && curl -L -s "${LINKARCH}" \
  | tar xzf - -C /opt/ \
  && chmod +x  /opt/cloudflared 
 
