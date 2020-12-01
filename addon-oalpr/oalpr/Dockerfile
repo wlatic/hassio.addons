@@ -1,6 +1,11 @@
 FROM hassioaddons/ubuntu-base:latest
 FROM $BUILD_FROM
 
+# Set shell
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+ARG BUILD_ARCH=amd64
+
 RUN apt-get update && \
     apt-get install apt-utils --yes && \
     apt-get upgrade --yes && \
