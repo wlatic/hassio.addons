@@ -33,3 +33,9 @@ RUN mkdir -p /root/oalpr/data && mkdir -p /root/oalpr/scripts && mkdir -p /root/
 COPY ./oalpr.py /root/oalpr/scripts
 
 CMD python3 -u /root/oalpr/scripts/oalpr.py
+
+# Build arguments
+ARG BUILD_ARCH
+ARG BUILD_DATE
+ARG BUILD_REF
+ARG BUILD_VERSION
