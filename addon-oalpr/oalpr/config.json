@@ -21,7 +21,7 @@
 	"boot": "auto",
 	"options": {
 		
-			"port": "port",
+			"port": "port"
 	},
 	"schema": false
 }
