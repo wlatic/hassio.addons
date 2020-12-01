@@ -13,9 +13,8 @@ RUN apt-get update && \
     apt-get install libopencv-dev libtesseract-dev python3-pip git cmake build-essential libleptonica-dev --yes && \
     apt-get install liblog4cplus-dev libcurl3-dev python3-numpy --yes && \
     pip3 install Flask && \
-    pip3 install requests
-
-RUN cd /root && \
+    pip3 install requests && \
+    cd /root && \
     git clone https://github.com/openalpr/openalpr.git && \
     cd openalpr/src && \
     mkdir build && \
@@ -26,11 +25,11 @@ RUN cd /root && \
     cd /root/openalpr/src/bindings/python && \
     python3 setup.py install && \
     cd / && \
-    rm -rf /root/openalpr/
+    rm -rf /root/openalpr/ && \
+    mkdir -p /config/oalpr && mkdir -p /config/oalpr/data && mkdir -p /config/oalpr/scripts && mkdir -p /config/oalpr/log && \
+    cp ./oalpr.py /config/oalpr/scripts
 
-RUN mkdir -p /config/oalpr && mkdir -p /config/oalpr/data && mkdir -p /config/oalpr/scripts && mkdir -p /config/oalpr/log
-
-COPY ./oalpr.py /config/oalpr/scripts
+COPY rootfs /
 
 CMD python3 -u /config/oalpr/scripts/oalpr.py
 
