@@ -28,11 +28,11 @@ RUN cd /root && \
     cd / && \
     rm -rf /root/openalpr/
 
-RUN mkdir -p /root/oalpr/data && mkdir -p /root/oalpr/scripts && mkdir -p /root/oalpr/log
+RUN mkdir -p /config/oalpr && mkdir -p /config/oalpr/data && mkdir -p /config/oalpr/scripts && mkdir -p /config/oalpr/log
 
-COPY ./oalpr.py /root/oalpr/scripts
+COPY ./oalpr.py /config/oalpr/scripts
 
-CMD python3 -u /root/oalpr/scripts/oalpr.py
+CMD python3 -u /config/oalpr/scripts/oalpr.py
 
 # Build arguments
 ARG BUILD_ARCH
