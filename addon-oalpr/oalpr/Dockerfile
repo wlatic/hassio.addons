@@ -1,4 +1,5 @@
-FROM multiarch/debian-debootstrap:armhf-stretch
+FROM hassioaddons/ubuntu-base:latest
+FROM $BUILD_FROM
 
 RUN apt-get update && \
     apt-get install apt-utils --yes && \
