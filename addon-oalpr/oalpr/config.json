@@ -1,0 +1,27 @@
+{
+	"name": "Oalpr",
+	"version": "0.1",
+	"slug": "oalpr",
+	"description": "Oalpr for Home Assistant",
+	"url": "https://github.com/wlatic/hassio.addons/blob/master/oalpr/readme.md",
+	"ingress": false,
+	"panel_icon": "mdi:docker",
+	"homeassistant": "0.104.0",
+	"arch": [
+    "aarch64",
+    "amd64",
+    "armhf",
+    "armv7"
+  ],
+	"map": [
+         "config:rw"
+  ],
+
+	"startup": "services",
+	"boot": "auto",
+	"options": {
+		
+			"port": "port",
+	},
+	"schema": false
+}
