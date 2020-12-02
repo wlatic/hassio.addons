@@ -5,14 +5,14 @@ import sys
 from flask import Flask
 from openalpr import Alpr
 
-LOG_FILE = '/root/oalpr/log/oalpr.log'
-IMAGE_FILE = '/root/oalpr/data/plate.jpg'
+LOG_FILE = '/config/oalpr/log/oalpr.log'
+IMAGE_FILE = '/config/oalpr/data/plate.jpg'
 
 logging.basicConfig(filename=LOG_FILE, filemode='w', format='%(asctime)s - %(message)s', level=logging.INFO)
 
 app = Flask(__name__)
-lpr = Alpr("eu", "/etc/openalpr/openalpr.conf", "/usr/share/openalpr/runtime_data")
-lpr.set_default_region("pt")
+lpr = Alpr("us", "/etc/openalpr/openalpr.conf", "/usr/share/openalpr/runtime_data")
+lpr.set_default_region("us")
 if not lpr.is_loaded():
     logging.error("Error loading OpenALPR")
     sys.exit(1)
