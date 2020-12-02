@@ -7,9 +7,7 @@ declare port
 
 # Ensure configuration exists
 if ! bashio::fs.directory_exists '/config/oalpr/'; then
-    mkdir -p /config/oalpr/data && \
-    mkdir -p /config/oalpr/scripts && \
-    mkdir -p /config/oalpr/log \
+    mkdir -p /config/oalpr/scripts \
         || bashio::exit.nok "Failed to create node-red configuration directory"
 
     # Copy in template files
