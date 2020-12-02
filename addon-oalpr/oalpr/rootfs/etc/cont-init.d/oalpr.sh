@@ -9,12 +9,12 @@ declare port
 if ! bashio::fs.directory_exists '/config/oalpr/'; then
     mkdir -p /config/oalpr/data && \
     mkdir -p /config/oalpr/scripts && \
-    mkdir -p /config/oalpr/logs \
+    mkdir -p /config/oalpr/log \
         || bashio::exit.nok "Failed to create node-red configuration directory"
 
     # Copy in template files
     cp /root/oalpr/scripts/oalpr.py /config/oalpr/
-    ln -s /root/oalpr/logs /config/oalpr/logs
-    ln -s /root/oalpr/data /config/oalpr/data
 
 fi
+    ln -s /root/oalpr/log /config/oalpr/log
+    ln -s /root/oalpr/data /config/oalpr/data
