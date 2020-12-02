@@ -13,7 +13,7 @@ if ! bashio::fs.directory_exists '/config/oalpr/'; then
         || bashio::exit.nok "Failed to create node-red configuration directory"
 
     # Copy in template files
-    cp /root/oalpr/scripts/oalpr.py /config/oalpr/
+    cp /root/oalpr/scripts/oalpr.py /config/oalpr/scripts/
 
 fi
     ln -s /root/oalpr/log /config/oalpr/log
