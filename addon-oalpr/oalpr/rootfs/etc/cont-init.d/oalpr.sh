@@ -16,5 +16,5 @@ if ! bashio::fs.directory_exists '/config/oalpr/'; then
     cp /root/oalpr/scripts/oalpr.py /config/oalpr/scripts/
 
 fi
-    ln -s /root/oalpr/log /config/oalpr/log
-    ln -s /root/oalpr/data /config/oalpr/data
+    ln -s /root/oalpr/log /config/oalpr
+    ln -s /root/oalpr/data /config/oalpr
