@@ -18,7 +18,7 @@ if not lpr.is_loaded():
     sys.exit(1)
 
 
-@app.route('/doIt')
+@app.route('/plate')
 def do_it():
     logging.info("Starting recognition")
 
