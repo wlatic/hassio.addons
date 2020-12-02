@@ -14,7 +14,9 @@ Setup Oalpr container with ease!
 
 ## About
 
+Once this addon is running you can use a webcam to put a photo in /config/oalpr/data/plate.jpg and then curl the address http://<HA IP>:5000/plate
 
+I've been using this with nodered and its really easy
 
 ## CONFIG
 
