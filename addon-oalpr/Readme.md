@@ -23,7 +23,7 @@ I've been using this with nodered and its really easy
 
 
 ## Other
-
+This is pretty much just https://github.com/tokenize47/oalpr packaged for Hassio
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
