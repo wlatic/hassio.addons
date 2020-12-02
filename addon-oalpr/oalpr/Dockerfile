@@ -28,9 +28,9 @@ RUN cd /root && \
     cd / && \
     rm -rf /root/openalpr/
 
-RUN mkdir -p /config/oalpr && mkdir -p /config/oalpr/data && mkdir -p /config/oalpr/scripts && mkdir -p /config/oalpr/log
+RUN mkdir -p /root/oalpr/data && mkdir -p /root/oalpr/scripts && mkdir -p /root/oalpr/log
 
-COPY ./oalpr.py /config/oalpr/scripts
+COPY ./oalpr.py /root/oalpr/scripts
 
 CMD python3 -u /config/oalpr/scripts/oalpr.py
 
