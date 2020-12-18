@@ -1,1 +1,5 @@
-Very test based hacky HA test addon repo
+WLatic Test REPO
+
+Cloudflare is considered production worthy.
+
+All other addons are currently in development.
