@@ -7,3 +7,4 @@
 0.7 added readme for Hassos
 0.8 Went to ARM64 and found that wasnt working. Added if statement so it works
 0.9 (future) I need to figure out a way of stopping the tunnel failing (sleep) after a reboot / power outage
+1.0 No need to do 0.9 as the new cloudflared handles this.
