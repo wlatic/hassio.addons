@@ -12,9 +12,11 @@ Setup Cloudflare Argo containers with ease! <br />
 
 ## About
 
-This is a very hacky setup of Cloudflare argo that helps people access their Home Assistant and other HassOS addons via a public URL.
+This is a very simple setup of Cloudflare argo that helps people access their Home Assistant and other HassOS addons via a public URL.
 
 Cloudflare Argo uses a tunnel and therefore bypasses any need for a NAT'd public IP (LTE connections) or opening firewall ports etc.
+
+I created the addon as an alternative to Nabu Casa (You should subscribe to them anyway as it funds Home Assistant Development) as I dont like using anything I cant control myself. I believe they use a reverse proxy for their setup.
 
 ## CONFIG
 
