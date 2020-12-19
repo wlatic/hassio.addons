@@ -12,7 +12,7 @@ RUN \
 apk add py3-cryptography py3-pip
 
 RUN \
-python3 -m pip install pycryptodome 
+python -m pip install pycryptodome 
 
 RUN \
 python -m pip install tinytuya
