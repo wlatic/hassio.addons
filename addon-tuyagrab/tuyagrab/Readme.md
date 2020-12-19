@@ -16,7 +16,12 @@ A way to grab Tuya Keys Easily for Local Tuya!
 
 Trying to find a way to grab the Tuya Keys quickly and easily for use with Tuya Local.
 
+Its a decently involved process to set this up, but then you'll be able to easily grab your required keys.
+
+The link to your devices file is at the top of the documentation tab.
+
 ## CONFIG
+Check documenation for config.
 
 
 
