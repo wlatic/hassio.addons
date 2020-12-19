@@ -12,10 +12,10 @@ RUN \
 apk add py3-cryptography py3-pip python3
 
 RUN \
-python3 -m pip install pycryptodome 
+pip3 install pycryptodome 
 
 RUN \
-python3 -m pip install tinytuya
+pip3 install tinytuya
 
 COPY rootfs /
 
