@@ -15,7 +15,7 @@ RUN \
 npm config set unsafe-perm true
 
 RUN \
-&& npm i @tuyapi/cli -g
+npm i @tuyapi/cli -g
 
 # Build arguments
 ARG BUILD_ARCH
