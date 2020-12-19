@@ -14,7 +14,7 @@ tuyadevice=$(bashio::config 'tuyadevice')
 
 bashio::log.info "Starting Tuya Device Capture"
 
-#exec ( 
-(echo "xufadfrua4ji0pelei4k"; sleep 5; echo "f6583ac0332a461694d712e067b03ea0"; sleep 5; echo "40374727c82b96ec9e1c") | tuya-cli wizard
-
-sleep 60m
+json = { "apiKey": "xufadfrua4ji0pelei4k", "apiDeviceID": "40374727c82b96ec9e1c", "apiSecret": "f6583ac0332a461694d712e067b03ea0", "apiRegion": "eu" }
+cd /opt
+echo $json > tinytuya.json
+(echo "y"; sleep 10; echo "n") |  python3 -m tinytuya wizard
