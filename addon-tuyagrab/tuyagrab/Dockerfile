@@ -8,8 +8,10 @@ WORKDIR /opt
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN \
-apk add gcc musl-dev libffi-dev openssl-dev python3-dev
+RUN apk add --no-cache \
+        libressl-dev \
+        musl-dev \
+        libffi-dev
 
 RUN \
 apk add py3-cryptography py3-pip python3
