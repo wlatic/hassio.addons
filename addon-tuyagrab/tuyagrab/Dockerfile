@@ -9,9 +9,9 @@ WORKDIR /opt
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN \
-apk add --no-cache npm \
-&& npm config set unsafe-perm true \ 
-&& npm i @tuyapi/cli -g
+apt-get install python-crypto python-pip \
+&& python3 -m pip install pycryptodome \ 
+&& python3 -m pip install tinytuya
 
 COPY rootfs /
 
