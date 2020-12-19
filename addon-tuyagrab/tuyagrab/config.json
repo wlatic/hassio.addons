@@ -21,9 +21,9 @@
 	"boot": "auto",
 	"options": {
 		
-			"tuyakey": "hostname",
-			"tuyasecret": "http://hassio:8123",
-			"device": "/config/cert/argo.pem"
+			"tuyakey": "API",
+			"tuyasecret": "APISECRET",
+			"tuyadevice": "DEVICEID"
 	},
 	"schema": false
 }
