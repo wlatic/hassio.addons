@@ -9,10 +9,10 @@ WORKDIR /opt
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN \
-apk add python-crypto python-pip 
+apk add py3-cryptography py3-pip
 
-RUN \ 
-python -m pip install pycryptodome 
+RUN \
+python3 -m pip install pycryptodome 
 
 RUN \
 python -m pip install tinytuya
