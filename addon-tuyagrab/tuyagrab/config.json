@@ -26,5 +26,7 @@
 			"tuyadevice": "DEVICEID",
 			"tuyaregion": "eu"
 	},
-	"schema": false
+	"schema": false,
+	"boot": manual,
+	
 }
