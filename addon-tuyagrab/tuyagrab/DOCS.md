@@ -1,4 +1,4 @@
-The End result of this addon is the following link: <a href="/local/tuyadevices.txt">Check devices</a>
+The End result of this addon is the following link: <a href="/local/tuyadevices.txt" target="_blank" >Check devices</a>
 
 It shows you all your Tuya account devices!!! Getting there is a little bit less simple.
 
