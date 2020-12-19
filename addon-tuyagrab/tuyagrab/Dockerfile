@@ -9,7 +9,7 @@ WORKDIR /opt
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN \
-apt-get install python-crypto python-pip \
+apk add python-crypto python-pip \
 && python3 -m pip install pycryptodome \ 
 && python3 -m pip install tinytuya
 
