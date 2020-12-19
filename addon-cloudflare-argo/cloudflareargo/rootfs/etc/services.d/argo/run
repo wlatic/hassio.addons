@@ -16,3 +16,5 @@ bashio::log.info "Starting CloudFlare Argo"
 
 # / Check URL
 exec /opt/cloudflared --config /etc/cloudflared/1.yml --origincert ${certificate} --no-tls-verify --proxy-connect-timeout 150s
+
+Sleep 120
