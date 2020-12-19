@@ -17,7 +17,7 @@ RUN \
 apk add py3-cryptography py3-pip python3
 
 RUN \
-pip3 install tinytuya
+python3 -m pip install tinytuya
 
 COPY rootfs /
 
