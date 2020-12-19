@@ -16,10 +16,6 @@ RUN apk add --no-cache \
 RUN \
 apk add py3-cryptography py3-pip python3
 
-
-RUN \
-pip3 install pycryptodome 
-
 RUN \
 pip3 install tinytuya
 
