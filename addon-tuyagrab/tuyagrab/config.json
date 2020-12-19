@@ -23,7 +23,8 @@
 		
 			"tuyakey": "API",
 			"tuyasecret": "APISECRET",
-			"tuyadevice": "DEVICEID"
+			"tuyadevice": "DEVICEID",
+			"tuyaregion": "eu"
 	},
 	"schema": false
 }
