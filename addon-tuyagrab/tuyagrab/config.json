@@ -1,0 +1,29 @@
+{
+	"name": "Tuya Grab",
+	"version": "0.1",
+	"slug": "tuyagrab",
+	"description": "Key Grabber for Tuya Local",
+	"url": "https://github.com/wlatic/hassio.addons/blob/master/tuyagrab/readme.md",
+	"ingress": false,
+	"panel_icon": "mdi:docker",
+	"homeassistant": "0.104.0",
+	"arch": [
+    "aarch64",
+    "amd64",
+    "armhf",
+    "armv7"
+  ],
+	"map": [
+         "config:rw"
+  ],
+
+	"startup": "services",
+	"boot": "auto",
+	"options": {
+		
+			"tuyakey": "hostname",
+			"tuyasecret": "http://hassio:8123",
+			"device": "/config/cert/argo.pem"
+	},
+	"schema": false
+}
