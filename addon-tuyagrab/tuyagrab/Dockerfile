@@ -9,13 +9,9 @@ WORKDIR /opt
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN \
-apk add --no-cache npm
-
-RUN \
-npm config set unsafe-perm true
-
-RUN \
-npm i @tuyapi/cli -g
+apk add --no-cache npm \
+&& npm config set unsafe-perm true \ 
+&& npm i @tuyapi/cli -g
 
 # Build arguments
 ARG BUILD_ARCH
