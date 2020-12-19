@@ -20,4 +20,4 @@ json='{ "apiKey": "${tuyakey}", "apiDeviceID": "${tuyadevice}", "apiSecret": "${
 json='{"apiKey": "'"${tuyakey}"'", "apiDeviceID": "'"${tuyadevice}"'", "apiSecret": "'"${tuyasecret}"'", "apiRegion": "'"${tuyaregion}"'" }'
 cd /opt
 echo $json > tinytuya.json
-(echo "y"; sleep 10; echo "n") |  python3 -m tinytuya wizard > /config/tuyadevices.txt
+(echo "y"; sleep 10; echo "n") |  python3 -m tinytuya wizard > /config/www/tuyadevices.txt
