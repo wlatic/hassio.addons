@@ -50,6 +50,8 @@ Access ID = tuyaKey
 Access Secret = tuyasecret
 Region = tuyaregion
 
+Once you've input them save and you can then start the app.
+
 Please note you only need to run this addon when you are looking for a device key, it will gather the devices every 5 minutes and you can click the link at the top of this document to browse through all of your device ids and keys!
 
 Once setup all you'll need to do is add the device to your Tuya/Smart Life app, run this addon, stop the addon and check the file generated.
