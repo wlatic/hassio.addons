@@ -12,6 +12,9 @@ RUN \
 apk add --no-cache npm
 
 RUN \
+npm config set unsafe-perm true
+
+RUN \
 && npm i @tuyapi/cli -g
 
 # Build arguments
