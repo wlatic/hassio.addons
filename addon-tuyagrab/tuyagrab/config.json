@@ -4,6 +4,7 @@
 	"slug": "tuyagrab",
 	"description": "Key Grabber for Tuya Local",
 	"url": "https://github.com/wlatic/hassio.addons/blob/master/tuyagrab/readme.md",
+	"webui": "local/tuyadevices.txt",
 	"ingress": false,
 	"panel_icon": "mdi:docker",
 	"homeassistant": "0.104.0",
