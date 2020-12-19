@@ -14,7 +14,7 @@ tuyadevice=$(bashio::config 'tuyadevice')
 
 bashio::log.info "Starting Tuya Device Capture"
 
-json='{ "apiKey": "xufadfrua4ji0pelei4k", "apiDeviceID": "40374727c82b96ec9e1c", "apiSecret": "f6583ac0332a461694d712e067b03ea0", "apiRegion": "eu" }'
+json='{ "apiKey": "${tuyakey}", "apiDeviceID": "${tuyadevice}", "apiSecret": "${tuyasecret}", "apiRegion": "eu" }'
 cd /opt
 echo $json > tinytuya.json
 (echo "y"; sleep 10; echo "n") |  python3 -m tinytuya wizard
