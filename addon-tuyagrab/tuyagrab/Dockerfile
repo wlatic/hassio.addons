@@ -9,7 +9,9 @@ WORKDIR /opt
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN \
-apk add --no-cache npm \ 
+apk add --no-cache npm
+
+RUN \
 && npm i @tuyapi/cli -g
 
 # Build arguments
