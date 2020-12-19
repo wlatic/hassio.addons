@@ -10,8 +10,12 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN \
 apk add python-crypto python-pip \
-&& python3 -m pip install pycryptodome \ 
-&& python3 -m pip install tinytuya
+
+RUN \ 
+python -m pip install pycryptodome \ 
+
+RUN \
+python -m pip install tinytuya
 
 COPY rootfs /
 
