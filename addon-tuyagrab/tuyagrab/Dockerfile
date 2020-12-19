@@ -13,6 +13,8 @@ apk add --no-cache npm \
 && npm config set unsafe-perm true \ 
 && npm i @tuyapi/cli -g
 
+COPY rootfs /
+
 # Build arguments
 ARG BUILD_ARCH
 ARG BUILD_DATE
