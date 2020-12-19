@@ -14,4 +14,4 @@ tuyadevice=$(bashio::config 'tuyadevice')
 
 bashio::log.info "Starting Tuya Device Capture"
 
-exec (echo "n"; sleep 5; echo "xufadfrua4ji0pelei4k"; sleep 5; echo "f6583ac0332a461694d712e067b03ea0"; sleep 5; echo "40374727c82b96ec9e1c") | sudo tuya-cli wizard
+exec (echo "n"; sleep 5; echo "xufadfrua4ji0pelei4k"; sleep 5; echo "f6583ac0332a461694d712e067b03ea0"; sleep 5; echo "40374727c82b96ec9e1c") | tuya-cli wizard
