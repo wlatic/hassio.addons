@@ -8,7 +8,7 @@ WORKDIR /opt
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN apk add --no-cache .build-dependencies \
+RUN apk add --no-cache \
         g++=9.3.0-r2 \
         gcc=9.3.0-r2 \
         libc-dev=0.7.2-r3 \
