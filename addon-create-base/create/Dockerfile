@@ -1,4 +1,6 @@
-FROM golang:alpine
+ARG BUILD_FROM=hassioaddons/base
+# hadolint ignore=DL3006
+FROM ${BUILD_FROM}
 
 
 
