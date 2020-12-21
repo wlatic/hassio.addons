@@ -1,12 +1,5 @@
-ARG BUILD_FROM=hassioaddons/base-python:5.3.4
-# hadolint ignore=DL3006
-FROM ${BUILD_FROM}
+FROM golang:alpine
 
-# Set workdir
-WORKDIR /opt
-
-# Set shell
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 
 COPY rootfs /
