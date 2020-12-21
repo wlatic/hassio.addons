@@ -8,7 +8,8 @@ WORKDIR /opt
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN pip install cryptography \
+RUN apk add --no-cache libressl-dev musl-dev libffi-dev \
+&& pip install cryptography \
 && python3 -m pip install tinytuya
 
 COPY rootfs /
