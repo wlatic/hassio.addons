@@ -8,7 +8,7 @@ WORKDIR /opt
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN apk add --no-cache gcc libressl musl-dev libffi-dev
+RUN apk add --no-cache libressl-dev musl-dev libffi-dev
 
 COPY rootfs /
 
