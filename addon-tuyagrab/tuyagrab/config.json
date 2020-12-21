@@ -26,7 +26,7 @@
 			"tuyadevice": "DEVICEID",
 			"tuyaregion": "eu",
 			"refreshtime": "300",
-			"shutdowntime": "15"
+			"shutdowntime": "900"
 	},
 	"schema": false	
 }
