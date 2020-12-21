@@ -8,7 +8,7 @@ WORKDIR /opt
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN apk add --no-cache libressl-dev musl-dev libffi-dev gcc py3-pip python3-dev py3-cryptography \
+RUN apk add --no-cache libressl-dev musl-dev libffi-dev python3-dev gcc python3 py3-pip py3-cryptography \
 && python3 -m pip install tinytuya \
 && apk del libressl-dev musl-dev libffi-dev gcc
 
