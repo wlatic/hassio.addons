@@ -8,8 +8,7 @@ WORKDIR /opt
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN apk add py3-cryptography \ 
-
+RUN pip install cryptography 
 && python3 -m pip install tinytuya
 
 COPY rootfs /
