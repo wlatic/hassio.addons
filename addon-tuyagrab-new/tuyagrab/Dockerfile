@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base-python:5.3.4
+ARG BUILD_FROM=hassioaddons/base
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -8,7 +8,8 @@ WORKDIR /opt
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN apk add --no-cache libressl-dev musl-dev libffi-dev
+RUN apk add --no-cache libressl-dev musl-dev libffi-dev gcc py3-pip python3-dev py3-cryptography
+&& python3 -m pip install tinytuya
 
 COPY rootfs /
 
