@@ -15,10 +15,10 @@ RUN \
     && if [[ "${BUILD_ARCH}" = "armv7" ]]; then ARCH="arm"; fi \
     && if [[ "${BUILD_ARCH}" = "i386" ]]; then ARCH="386"; fi \
 
-&& apk add libc6-compat
+RUN \ 
+apk add libc6-compat
 
 RUN \
-
 if [[ "$ARCH" = "arm64" ]]; then mkdir /etc/cloudflared && curl -L -s -o /opt/cloudflared "https://github.com/cloudflare/cloudflared/releases/download/2020.11.11/cloudflared-linux-arm64" && chmod +x /opt/cloudflared; else mkdir /etc/cloudflared && curl -L -s "https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-${ARCH}.tgz" | tar xzf - -C /opt/ && chmod +x /opt/cloudflared;  fi 
 
 COPY rootfs /
