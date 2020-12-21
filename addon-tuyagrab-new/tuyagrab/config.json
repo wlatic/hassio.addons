@@ -1,7 +1,7 @@
 {
 	"name": "Tuya Grab Test",
 	"version": "0.4",
-	"slug": "tuyagrab",
+	"slug": "tuyagrabnew",
 	"description": "Key Grabber for Tuya Local",
 	"url": "https://github.com/wlatic/hassio.addons/blob/master/tuyagrab/readme.md",
 	"ingress": false,
