@@ -12,7 +12,6 @@ RUN apk add --no-cache libressl-dev musl-dev libffi-dev gcc py3-pip python3-dev 
 && python3 -m pip install tinytuya \
 && apk del libressl-dev musl-dev libffi-dev gcc
 
-&& python3 -m pip install tinytuya 
 COPY rootfs /
 
 # Build arguments
