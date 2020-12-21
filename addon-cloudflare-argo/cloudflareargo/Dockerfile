@@ -38,7 +38,7 @@ LABEL \
     org.label-schema.description="Argo Cloudflare Proxy" \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="ArgoCloudflare" \
-    org.label-schema.schema-version="0.7" \
+    org.label-schema.schema-version="1.1" \
     org.label-schema.url="" \
     org.label-schema.usage="https://github.com/wlatic/hassio.addons/tree/master/addon-cloudflare-argo/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
