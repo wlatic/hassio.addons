@@ -1,8 +1,8 @@
 {
-	"name": "Tuya Grab Test",
-	"version": "0.4",
-	"slug": "tuyagrab",
-	"description": "Key Grabber for Tuya Local",
+	"name": "Dont Install Testing",
+	"version": "0.000001",
+	"slug": "testingimage",
+	"description": "Testing image",
 	"url": "https://github.com/wlatic/hassio.addons/blob/master/tuyagrab/readme.md",
 	"ingress": false,
 	"panel_icon": "mdi:docker",
