@@ -1,0 +1,2 @@
+0.1 Simple way of outputting all Tuya Devices to a URL on Hass
+0.2 outputs to both the log and also a local file
