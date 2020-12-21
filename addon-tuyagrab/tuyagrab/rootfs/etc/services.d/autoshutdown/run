@@ -14,4 +14,4 @@ time=$(( ${shutdowntime} + 60 ))
 sleep ${time}
 
 bashio::log.info "Auto Shutdown"
-shutdown -rf now
+poweroff
