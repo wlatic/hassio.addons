@@ -2,7 +2,12 @@ The End result of this addon is the following link: <a href="/local/tuyadevices.
 
 It shows you all your Tuya account devices!!! Getting there is a little bit less simple.
 
-Add your devices to the Smart Life or Tuya App.
+
+-- How to get Tuya API Credentials -- 
+
+Tuya has the following document: https://developer.tuya.com/en/docs/iot/open-api/quick-start/quick-start1?id=K95ztz9u9t89n I've tried to give a real short and simple guide below.
+
+Add your devices to the Smart Life or Tuya App on phone.
 
 Register on <a href="https://iot.tuya.com">iot.tuya.com</a>
 
@@ -55,6 +60,8 @@ Once you've input them save and you can then start the app.
 Please note you only need to run this addon when you are looking for a device key, it will gather the devices every 5 minutes and you can click the link at the top of this document to browse through all of your device ids and keys!
 
 Once setup all you'll need to do is add the device to your Tuya/Smart Life app, run this addon, stop the addon and check the file generated.
+
+-- Extras -- 
 
 You can also use a sensor to show the file:
 
