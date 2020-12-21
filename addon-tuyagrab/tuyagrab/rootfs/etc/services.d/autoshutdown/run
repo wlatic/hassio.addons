@@ -10,5 +10,7 @@ shutdowntime=$(bashio::config 'shutdowntime')
 
 bashio::log.info "Starting Auto Shutdown Timer"
 
-sleep ${shutdowntime}
+time=$(( ${shutdowntime} + 2 ))
+sleep ${time}
+
 shutdown -rf now
