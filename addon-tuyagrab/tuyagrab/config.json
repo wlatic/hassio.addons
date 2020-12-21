@@ -25,6 +25,7 @@
 			"tuyasecret": "APISECRET",
 			"tuyadevice": "DEVICEID",
 			"tuyaregion": "eu",
+			"refreshtime": "5",
 			"shutdowntime": "15"
 	},
 	"schema": false	
