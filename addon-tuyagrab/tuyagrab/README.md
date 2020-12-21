@@ -2,6 +2,8 @@
 
 A way to grab Tuya Keys Easily for Local Tuya!
 
+Make sure you read the Documenation tab.
+
 
 ![Project Stage][project-stage-shield]
 [![License][license-shield]](LICENSE.md)
