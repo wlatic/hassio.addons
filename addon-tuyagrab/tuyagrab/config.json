@@ -24,7 +24,8 @@
 			"tuyakey": "API",
 			"tuyasecret": "APISECRET",
 			"tuyadevice": "DEVICEID",
-			"tuyaregion": "eu"
+			"tuyaregion": "eu",
+			"shutdowntime": "15m"
 	},
 	"schema": false	
 }
