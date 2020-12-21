@@ -8,9 +8,9 @@ WORKDIR /opt
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN apk add --no-cache g++ gcc libc-dev linux-headers make py3-pip python3-dev
-
 RUN apk add --no-cache python3
+
+RUN apk add --no-cache g++ gcc libc-dev linux-headers make py3-pip python3-dev
 
 RUN \
 apk add py3-cryptography py3-pip python3 
