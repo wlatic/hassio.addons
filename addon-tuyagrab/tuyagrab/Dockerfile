@@ -11,7 +11,7 @@ RUN apk add --no-cache \
         linux-headers=5.4.5-r1 \
         make=4.3-r0 \
         py3-pip=20.1.1-r0 \
-        python3-dev=3.8.5-r0
+        python3-dev=3.8.5-r0 \
         python3-dev=3.8.5-r0 \
 && apk add --no-cache \
         python3=3.8.5-r0 \
