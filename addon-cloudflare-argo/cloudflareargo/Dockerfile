@@ -17,7 +17,7 @@ RUN \
 
 && apk add libc6-compat \
 
-&& mkdir /etc/cloudflared && curl -L -s "https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-${ARCH}.tgz" | tar xzf - -C /opt/ && chmod +x /opt/cloudflared;  fi 
+&& mkdir /etc/cloudflared && curl -L -s "https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-${ARCH}.tgz" | tar xzf - -C /opt/ && chmod +x /opt/cloudflared
 
 COPY rootfs /
 
