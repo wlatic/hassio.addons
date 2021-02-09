@@ -23,7 +23,7 @@
 		
 			"hostname": "hostname",
 			"url": "http://hassio:8123",
-			"certificate": "/config/cert/argo.pem"
+			"certificate": "/config/cert/argo.pem",
 			"hostname2": "null",
 			"url2": "null:,
 			"hostname3": "null",
