@@ -25,7 +25,6 @@
 			"url": "http://hassio:8123",
 			"certificate": "/config/cert/argo.pem"
 	},
-	"schema": false
 	 "schema": {
     "hostname": "str",
     "url": "str",
