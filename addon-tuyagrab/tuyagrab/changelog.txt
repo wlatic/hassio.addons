@@ -2,3 +2,4 @@
 0.2 outputs to both the log and also a local file
 0.3 Added controllable auto shutdown time + allowed people to change refresh time.
 0.4 Used wrong shutdown command for Alpine, changed and updated.
+0.5 added schema
