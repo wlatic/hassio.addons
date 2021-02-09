@@ -28,5 +28,11 @@
 			"refreshtime": "300",
 			"shutdowntime": "900"
 	},
-	"schema": false	
+	"schema": {
+    "tuyakey": "str",
+    "tuyasecret": "str",
+    "tuyadevice": "str",
+    "tuyaregion": "str",
+    "refreshtime": "str",
+    "shutdowntime": "str"
 }
