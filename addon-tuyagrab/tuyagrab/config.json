@@ -26,8 +26,7 @@
 			"tuyadevice": "DEVICEID",
 			"tuyaregion": "eu",
 			"refreshtime": "300",
-			"shutdowntime": "900",
-			"output": ""
+			"shutdowntime": "900"
 	},
 	"schema": {
     "tuyakey": "str",
@@ -35,7 +34,6 @@
     "tuyadevice": "str",
     "tuyaregion": "str",
     "refreshtime": "str",
-    "shutdowntime": "str",
-    "output": "str"
+    "shutdowntime": "str"
 }
 }
