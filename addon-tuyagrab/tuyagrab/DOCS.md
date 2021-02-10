@@ -1,5 +1,7 @@
 The End result of this addon is your devices are output to the log of this Addon. It also creates a text file within config called tuyadevices.txt
 
+To open logs in a new tab click <a href="/logs" target="_blank">here</a>
+
 It shows you all your Tuya account devices!!! Getting there is a little bit less simple.
 
 
