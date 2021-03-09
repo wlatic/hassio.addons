@@ -69,4 +69,4 @@ You can also use a sensor to show the file:
 
 sensor:
   - platform: command_line
-    command: cat /config/www/tuyadevices.txt
+    command: cat /config/tuyadevices.txt
