@@ -1,6 +1,6 @@
 {
 	"name": "Tuya Grab",
-	"version": "0.4",
+	"version": "0.7",
 	"slug": "tuyagrab",
 	"description": "Key Grabber for Tuya Local",
 	"url": "https://github.com/wlatic/hassio.addons/blob/master/tuyagrab/readme.md",
@@ -28,5 +28,12 @@
 			"refreshtime": "300",
 			"shutdowntime": "900"
 	},
-	"schema": false	
+	"schema": {
+    "tuyakey": "str",
+    "tuyasecret": "str",
+    "tuyadevice": "str",
+    "tuyaregion": "str",
+    "refreshtime": "str",
+    "shutdowntime": "str"
+}
 }

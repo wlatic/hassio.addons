@@ -9,3 +9,6 @@
 0.9 (future) I need to figure out a way of stopping the tunnel failing (sleep) after a reboot / power outage
 1.0 No need to do 0.9 as the new cloudflared handles this.
 1.1 Convert to alpine
+1.2 updated Arm64 github.com/cloudflare/cloudflared/releases/download/2021.1.5/cloudflared-linux-arm64 version
+1.3 changed over to #!/usr/bin/env bashio and then changed back!
+1.4 added schema to solve problem with addon config

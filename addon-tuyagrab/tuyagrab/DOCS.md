@@ -1,4 +1,4 @@
-Once you've set this addon up, just click this link: <a href="/local/tuyadevices.txt" target="_blank">Check devices</a>
+Once you've set this addon up, you can access: config/tuyadevices.txt
 
 It shows you all your Tuya account devices and their keys! Getting there is a little bit less simple, but still easy.
 
