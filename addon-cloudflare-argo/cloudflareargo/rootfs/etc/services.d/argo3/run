@@ -18,3 +18,11 @@ bashio::log.info "Starting CloudFlare Argo Tunnel 3"
 # / Check URL
 exec /opt/cloudflared --config /etc/cloudflared/3.yml --origincert ${certificate3} --no-tls-verify --proxy-connect-timeout 150s
 fi
+
+if ! bashio::config.has_value 'hostname2'; then
+SUPERVISED_DIR=/var/run/s6/services
+
+s6-svc -x ${SUPERVISED_DIR}/argo3
+rm -rf ${SUPERVISED_DIR}/argo3
+s6-svscanctl -a ${SUPERVISED_DIR}
+fi
