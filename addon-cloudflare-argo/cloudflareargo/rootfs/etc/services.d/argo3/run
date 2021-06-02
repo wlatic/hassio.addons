@@ -22,7 +22,7 @@ fi
 if [[ $(bashio::config "hostname3") == "null" ]]; then
 SUPERVISED_DIR=/var/run/s6/services
 
-s6-svc -x ${SUPERVISED_DIR}/argo2
-rm -rf ${SUPERVISED_DIR}/argo2
+s6-svc -x ${SUPERVISED_DIR}/argo3
+rm -rf ${SUPERVISED_DIR}/argo3
 s6-svscanctl -a ${SUPERVISED_DIR}       
 fi
