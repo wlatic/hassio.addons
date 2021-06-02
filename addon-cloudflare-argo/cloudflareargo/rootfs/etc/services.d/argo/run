@@ -5,16 +5,16 @@
 # ==============================================================================
 declare -a options
 declare certificate 
-declare cf-cred
+declare cfcred
 
 
-cf-cred=$(bashio::config 'cf-cred')
+cfcred=$(bashio::config 'cfcred')
 certificate=$(bashio::config 'certificate')
 
 
 bashio::log.info "Starting CloudFlare Argo"
 
 # / Check URL
-exec /opt/cloudflared --origincert=${certificate} --cred-file=${cf-cred} tunnel run
+exec /opt/cloudflared --origincert=${certificate} --cred-file=${cfcred} tunnel run
 
 Sleep 15
