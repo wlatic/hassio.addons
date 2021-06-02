@@ -34,12 +34,12 @@
 	 "schema": {
     "hostname": "str",
     "url": "str",
+    "certificate": "str",
     "hostname2": "str",
     "url2": "str",
+    "certificate2": "str",
     "hostname3": "str",
     "url3": "str",
-    "certificate": "str",
-    "certificate2": "str",
     "certificate3": "str"
   }
 }
