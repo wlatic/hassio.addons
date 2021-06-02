@@ -31,5 +31,7 @@ if bashio::config.has_value 'hostname2'; then
 fi
 
 if bashio::config.has_value 'hostname3'; then
-    echo -e "  - hostname: ${hostname3}\n    service: ${service3}\n  - service: http_status:404" >> ${cfconfig}
+    echo -e "  - hostname: ${hostname3}\n    service: ${service3}\n" >> ${cfconfig}
 fi
+
+  echo -e "- service: http_status:404" >> ${cfconfig}
