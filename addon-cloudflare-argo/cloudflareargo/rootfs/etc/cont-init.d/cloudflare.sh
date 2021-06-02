@@ -19,7 +19,7 @@ declare hostname2
 declare service2
 declare hostname3
 declare service3
-declare add-config
+declare addconfig
 
 hostname=$(bashio::config 'hostname')
 service=$(bashio::config 'service')
@@ -27,7 +27,7 @@ hostname2=$(bashio::config 'hostname2')
 service2=$(bashio::config 'service2')
 hostname3=$(bashio::config 'hostname3')
 service3=$(bashio::config 'service3')
-add-config=$(bashio::config 'add-config')
+addconfig=$(bashio::config 'addconfig')
 
 echo -e "tunnel: homeassistant\ncredentials-file: /config/cf-argo/cf-ha.json\n\ningress:\n  - hostname: ${hostname}\n    service: ${service}\n" > /config/cf-argo/config.yml
 
