@@ -21,25 +21,24 @@
 	"boot": "auto",
 	"options": {
 		
-			"hostname": "hostname",
-			"url": "http://hassio:8123",
 			"certificate": "/config/cert/argo.pem",
+			"cf-cred": "http://hassio:8123",
+			"hostname": "host",
+			"service": "service",
 			"hostname2": "null",
 			"url2": "null",
-			"certificate2": "null",
+			"service2": "null",
 			"hostname3": "null",
-			"url3": "null",
-			"certificate3": "null"
+			"service3": "null"
 	},
 	 "schema": {
-    "hostname": "str",
-    "url": "str",
     "certificate": "str",
+    "cf-cred": "str",
+    "hostname": "str",
+    "service": "str",
     "hostname2": "str",
-    "url2": "str",
-    "certificate2": "str",
+    "serivce2": "str",
     "hostname3": "str",
-    "url3": "str",
-    "certificate3": "str"
+    "service3": "str"
   }
 }
