@@ -28,7 +28,7 @@
 			"service2": "null",
 			"hostname3": "null",
 			"service3": "null",
-			"add-config": "null"
+			"addconfig": "null"
 	},
 	 "schema": {
     "certificate": "str",
