@@ -38,6 +38,6 @@
     "service2": "str",
     "hostname3": "str",
     "service3": "str",
-    "add-config": "str"
+    "addconfig": "str"
   }
 }
