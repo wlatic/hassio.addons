@@ -26,8 +26,10 @@
 			"certificate": "/config/cert/argo.pem",
 			"hostname2": "null",
 			"url2": "null",
+			"certificate2": "null",
 			"hostname3": "null",
-			"url3": "null"
+			"url3": "null",
+			"certificate3": "null"
 	},
 	 "schema": {
     "hostname": "str",
@@ -36,6 +38,8 @@
     "url2": "str",
     "hostname3": "str",
     "url3": "str",
-    "certificate": "str"
+    "certificate": "str",
+    "certificate2": "str",
+    "certificate3": "str"
   }
 }
