@@ -22,22 +22,22 @@
 	"options": {
 		
 			"certificate": "/config/cert/argo.pem",
-			"cfconfig": "/config/cf-config.yml",
 			"hostname": "host",
 			"service": "http://hassio:8123",
 			"hostname2": "null",
 			"service2": "null",
 			"hostname3": "null",
-			"service3": "null"
+			"service3": "null",
+			"add-config": "null"
 	},
 	 "schema": {
     "certificate": "str",
-    "cfconfig": "str",
     "hostname": "str",
     "service": "str",
     "hostname2": "str",
     "service2": "str",
     "hostname3": "str",
-    "service3": "str"
+    "service3": "str",
+    "add-config": "str"
   }
 }
