@@ -5,7 +5,7 @@ declare certificate
 certificate=$(bashio::config 'certificate')
 
 if ! bashio::fs.directory_exists '/config/cf-argo/'; then
-    mkdir -p /config/cf-argo && \
+    mkdir -p /config/cf-argo \
         || bashio::exit.nok "Failed to create CloudFlare Argo configuration directory"
 fi
 
