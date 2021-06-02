@@ -6,7 +6,6 @@ certificate=$(bashio::config 'certificate')
 
 if ! bashio::fs.directory_exists '/config/cf-argo/'; then
     mkdir -p /config/cf-argo \
-        || bashio::exit.nok "Failed to create CloudFlare Argo configuration directory"
 fi
 
 if ! bashio::fs.file_exists "/config/cf-argo/cf-ha.json"; then
@@ -39,7 +38,7 @@ if bashio::config.has_value 'hostname3'; then
     echo -e "  - hostname: ${hostname3}\n    service: ${service3}\n" >> /config/cf-argo/config.yml
 fi
 
-if bashio::config.has_value '${addconfig}'; then
+if bashio::config.has_value 'addconfig'; then
     cat ${addconfig} >> /config/cf-argo/config.yml
 fi
 
