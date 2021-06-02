@@ -14,3 +14,4 @@
 1.4 added schema to solve problem with addon config
 1.5 Fixed services continuing to run when argo2 and argo3 tunnels didn't exist
 1.6 Certificate Fix for Tunnel 2 and 3
+1.7 Updated file that ARM64 downloads so its always the latest version
