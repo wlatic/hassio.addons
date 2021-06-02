@@ -39,8 +39,8 @@ if bashio::config.has_value 'hostname3'; then
     echo -e "  - hostname: ${hostname3}\n    service: ${service3}\n" >> /config/cf-argo/config.yml
 fi
 
-if bashio::config.has_value '${add-config}'; then
-    cat ${add-config} >> /config/cf-argo/config.yml
+if bashio::config.has_value '${addconfig}'; then
+    cat ${addconfig} >> /config/cf-argo/config.yml
 fi
 
 echo -e "  - service: http_status:404" >> /config/cf-argo/config.yml
