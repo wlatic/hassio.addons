@@ -25,12 +25,12 @@ service2=$(bashio::config 'service2')
 hostname3=$(bashio::config 'hostname3')
 service3=$(bashio::config 'service3')
 
-echo -e "credentials-file: /config/cf-ha.yml\ningress:\n  - hostname: ${hostname}\n    service: ${service}" > $(cf-cred}
+echo -e "credentials-file: /config/cf-ha.yml\ningress:\n  - hostname: ${hostname}\n    service: ${service}" > ${cf-cred}
 
 echo -e "tunnel: homeassistant\ncredentials-file: ${cf-cred}\n\ningress:\n  - hostname: hause.homenet.house\n     service: http://192.168.5.55:8123\n" > ${cf-cred}
 
 if bashio::config.has_value 'hostname2'; then
-    echo -e "  - hostname: ${hostname2}\n    service: ${service2}\n" >> $(cf-cred}
+    echo -e "  - hostname: ${hostname2}\n    service: ${service2}\n" >> ${cf-cred}
 fi
 
 if bashio::config.has_value 'hostname3'; then
