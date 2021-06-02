@@ -22,7 +22,7 @@
 	"options": {
 		
 			"certificate": "/config/cert/argo.pem",
-			"cfcred": "/config/cf-cred.json",
+			"cfconfig": "/config/cf-config.json",
 			"hostname": "host",
 			"service": "http://hassio:8123",
 			"hostname2": "null",
@@ -32,7 +32,7 @@
 	},
 	 "schema": {
     "certificate": "str",
-    "cfcred": "str",
+    "cfconfig": "str",
     "hostname": "str",
     "service": "str",
     "hostname2": "str",
