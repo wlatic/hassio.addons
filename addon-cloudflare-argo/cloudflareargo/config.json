@@ -26,7 +26,6 @@
 			"hostname": "host",
 			"service": "http://hassio:8123",
 			"hostname2": "null",
-			"url2": "null",
 			"service2": "null",
 			"hostname3": "null",
 			"service3": "null"
