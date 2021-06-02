@@ -1,10 +1,10 @@
 #!/usr/bin/env bashio
 declare -a options
 declare certificate
-declare cfcred
+declare cfconfig
 
 certificate=$(bashio::config 'certificate')
-cfcred=$(bashio::config 'cfconfig')
+cfconfig=$(bashio::config 'cfconfig')
 
 if ! bashio::fs.file_exists "/config/cf-ha.json"; then
 /opt/cloudflared --origincert=${certificate} --cred-file=/config/cf-ha.json tunnel create homeassistant
