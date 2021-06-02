@@ -5,7 +5,7 @@ certificate=$(bashio::config 'certificate')
 cf-cred=$(bashio::config 'cf-cred')
 
 if ! bashio::fs.file_exists '${cf-cred}'; then
-   /opt/cloudflared --origincert=${certificate} --cred-file=/config/cf-ha.yml tunnel create homeassistant
+   /opt/cloudflared --origincert=${certificate} --cred-file=/config/cf-ha.json tunnel create homeassistant
 fi
 
 declare hostname
@@ -22,12 +22,12 @@ service2=$(bashio::config 'service2')
 hostname3=$(bashio::config 'hostname3')
 service3=$(bashio::config 'service3')
 
-echo -e "ingress:\n  - hostname: ${hostname}\n    service: ${service}" > $(cf-cred}
+echo -e "credentials-file: /config/cf-ha.yml\ningress:\n  - hostname: ${hostname}\n    service: ${service}" > $(cf-cred}
 
 if bashio::config.has_value 'hostname2'; then
     echo -e "  - hostname: ${hostname2}\n    service: ${service2}" >> $(cf-cred}
 fi
 
 if bashio::config.has_value 'hostname3'; then
-    echo -e "  - hostname: ${hostname3}\n    service: ${service3}" >> $(cf-cred}
+    echo -e "  - hostname: ${hostname3}\n    service: ${service3}\n  - service: http_status:404" >> $(cf-cred}
 fi
