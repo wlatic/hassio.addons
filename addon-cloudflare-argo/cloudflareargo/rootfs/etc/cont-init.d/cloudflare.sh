@@ -7,7 +7,8 @@ certificate=$(bashio::config 'certificate')
 cfcred=$(bashio::config 'cfcred')
 
 if ! bashio::fs.file_exists '${cfcred}'; then
-   /opt/cloudflared --origincert=${certificate} --cred-file=${cfcred} tunnel create homeassistant
+   echo "file not exists"
+   #/opt/cloudflared --origincert=${certificate} --cred-file=${cfcred} tunnel create homeassistant
 fi
 
 declare hostname
