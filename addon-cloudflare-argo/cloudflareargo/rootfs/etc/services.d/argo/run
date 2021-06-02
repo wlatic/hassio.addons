@@ -5,16 +5,16 @@
 # ==============================================================================
 declare -a options
 declare certificate 
-declare url
+declare cf-cred
 
 
-url=$(bashio::config 'url')
+cf-cred=$(bashio::config 'cf-cred')
 certificate=$(bashio::config 'certificate')
 
 
 bashio::log.info "Starting CloudFlare Argo"
 
 # / Check URL
-exec /opt/cloudflared --config /etc/cloudflared/1.yml --origincert ${certificate} --no-tls-verify --proxy-connect-timeout 150s
+exec /opt/cloudflared --origincert=${certificate} --cred-file={$cf-cred} cloudflared tunnel run homeassistant
 
 Sleep 120
