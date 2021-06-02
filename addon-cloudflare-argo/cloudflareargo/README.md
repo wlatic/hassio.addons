@@ -22,7 +22,7 @@ I created the addon as an alternative to Nabu Casa (You should subscribe to them
 
 The basic config enables 1 Cloudflare Argo tunnel using:
 certificate ( sign-up via https://www.cloudflare.com/a/warp upload to /config and put the path here )
-cf-cred ( set a /config based path here ,the file will generate itself)
+
 hostname
 service
 
@@ -38,6 +38,8 @@ When you leave hostname2 and 3 blank they will not be compiled into settings
 
 You'll need to sign up for Argo with Cloudflare directly and generate an SSL certificate at the following url:
 https://www.cloudflare.com/a/warp
+
+The add-config value allows you to pull in further routes from a specific file.
 
 ## Multiple Domains
 Currently for this new version of Argo multiple domains are not supported.
