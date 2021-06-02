@@ -36,7 +36,7 @@
     "hostname": "str",
     "service": "str",
     "hostname2": "str",
-    "serivce2": "str",
+    "service2": "str",
     "hostname3": "str",
     "service3": "str"
   }
