@@ -32,14 +32,15 @@ add-config=$(bashio::config 'add-config')
 echo -e "tunnel: homeassistant\ncredentials-file: /config/cf-argo/cf-ha.json\n\ningress:\n  - hostname: ${hostname}\n    service: ${service}\n" > /config/cf-argo/config.yml
 
 if bashio::config.has_value 'hostname2'; then
-    echo -e "  - hostname: ${hostname2}\n&nbsp;&nbsp;&nbsp;&nbsp;service: ${service2}\n" >> /config/cf-argo/config.yml
+    echo -e "  - hostname: ${hostname2}\n    service: ${service2}\n" >> /config/cf-argo/config.yml
 fi
 
 if bashio::config.has_value 'hostname3'; then
-    echo -e "  - hostname: ${hostname3}\n&nbsp;&nbsp;&nbsp;&nbsp;service: ${service3}\n" >> /config/cf-argo/config.yml
+    echo -e "  - hostname: ${hostname3}\n    service: ${service3}\n" >> /config/cf-argo/config.yml
 fi
 
 if bashio::config.has_value '${add-config}'; then
-    echo -e "add config" >> /config/cf-argo/config.yml
+    cat ${add-config} >> /config/cf-argo/config.yml
 fi
+
 echo -e "  - service: http_status:404" >> /config/cf-argo/config.yml
