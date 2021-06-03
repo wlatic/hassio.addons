@@ -33,6 +33,7 @@
 	},
 	 "schema": {
     "certificate": "str",
+	"tunnel_name": "str",
     "hostname": "str",
     "service": "str",
     "hostname2": "str",
