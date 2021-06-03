@@ -29,7 +29,7 @@ service3=$(bashio::config 'service3')
 addconfig=$(bashio::config 'addconfig')
 
 if bashio::config.has_value 'hostname'; then
-echo -e "tunnel: homeassistant\ncredentials-file: /config/cf-argo/cf-ha.json\n\ningress:\n  - hostname: ${hostname}\n    service: ${service}\n" > /config/cf-argo/config.yml
+echo -e "tunnel: $(bashio::config 'tunnel_name')\ncredentials-file: /config/cf-argo/cf-ha.json\n\ningress:\n  - hostname: ${hostname}\n    service: ${service}\n" > /config/cf-argo/config.yml
 fi
 
 if bashio::config.has_value 'hostname2'; then
