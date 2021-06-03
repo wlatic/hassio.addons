@@ -9,7 +9,7 @@ if ! bashio::fs.directory_exists '/config/cf-argo/'; then
 fi
 
 if ! bashio::fs.file_exists "/config/cf-argo/cf-ha.json"; then
-/opt/cloudflared --origincert=${certificate} --cred-file=/config/cf-ha.json tunnel create homeassistant
+/opt/cloudflared --origincert=${certificate} --cred-file=/config/cf-argo/cf-ha.json tunnel create homeassistant
 fi
 
 declare hostname
