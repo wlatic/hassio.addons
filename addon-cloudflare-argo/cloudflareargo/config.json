@@ -1,6 +1,6 @@
 {
 	"name": "Cloudflare Argo",
-	"version": "2.0",
+	"version": "2.1",
 	"slug": "argocloudflare",
 	"description": "Argo for Home Assistant",
 	"url": "https://github.com/wlatic/hassio.addons/blob/master/cloudflareargo/readme.md",
@@ -8,36 +8,36 @@
 	"panel_icon": "mdi:docker",
 	"homeassistant": "0.104.0",
 	"arch": [
-    "aarch64",
-    "amd64",
-    "armhf",
-    "armv7"
-  ],
+		"aarch64",
+		"amd64",
+		"armhf",
+		"armv7"
+	],
 	"map": [
-         "config:rw"
-  ],
-
+		"config:rw"
+	],
 	"startup": "services",
 	"boot": "auto",
 	"options": {
-		
-			"certificate": "/config/cert/argo.pem",
-			"hostname": "host",
-			"service": "http://hassio:8123",
-			"hostname2": "null",
-			"service2": "null",
-			"hostname3": "null",
-			"service3": "null",
-			"addconfig": "null"
+		"certificate": "/config/cert/argo.pem",
+		"tunnel_name": "homeassistant",
+		"hostname": "host",
+		"service": "http://hassio:8123",
+		"hostname2": "null",
+		"service2": "null",
+		"hostname3": "null",
+		"service3": "null",
+		"addconfig": "null"
 	},
-	 "schema": {
-    "certificate": "str",
-    "hostname": "str",
-    "service": "str",
-    "hostname2": "str",
-    "service2": "str",
-    "hostname3": "str",
-    "service3": "str",
-    "addconfig": "str"
-  }
+	"schema": {
+		"certificate": "str",
+		"tunnel_name": "str",
+		"hostname": "str",
+		"service": "str",
+		"hostname2": "str",
+		"service2": "str",
+		"hostname3": "str",
+		"service3": "str",
+		"addconfig": "str"
+	}
 }
