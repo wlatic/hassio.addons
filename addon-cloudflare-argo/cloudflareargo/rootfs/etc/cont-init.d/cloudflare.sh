@@ -9,7 +9,7 @@ if ! bashio::fs.directory_exists '/config/cf-argo/'; then
 fi
 
 if ! bashio::fs.file_exists "/config/cf-argo/cf-ha.json"; then
-/opt/cloudflared --origincert=${certificate} --cred-file=/config/cf-argo/cf-ha.json tunnel create $(bashio::config 'tunnel_name')
+/opt/cloudflared --origincert=${certificate} --cred-file=/config/cf-argo/cf-ha.json tunnel create homeassistant
 fi
 
 declare hostname
@@ -29,7 +29,7 @@ service3=$(bashio::config 'service3')
 addconfig=$(bashio::config 'addconfig')
 
 if bashio::config.has_value 'hostname'; then
-echo -e "tunnel: $(bashio::config 'tunnel_name')\ncredentials-file: /config/cf-argo/cf-ha.json\n\ningress:\n  - hostname: ${hostname}\n    service: ${service}\n" > /config/cf-argo/config.yml
+echo -e "tunnel: homeassistant\ncredentials-file: /config/cf-argo/cf-ha.json\n\ningress:\n  - hostname: ${hostname}\n    service: ${service}\n" > /config/cf-argo/config.yml
 fi
 
 if bashio::config.has_value 'hostname2'; then
