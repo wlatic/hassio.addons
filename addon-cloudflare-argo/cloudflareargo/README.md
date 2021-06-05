@@ -40,7 +40,7 @@ Prerequisites:“File Editor” add-on.
     * certificate
         * Leave as default if certificate located at /config/cert/argo.pem
     * tunnel_name (default: "homeassistant")
-        * The internal Cloudflareidentifier for your tunnel. It will not be publicly visible.
+        * The internal Cloudflare identifier for your tunnel. It will not be publicly visible.
         * The name *MUST* be unique for your Cloudflare account. 
         * The name *CAN* be the same as the subdomain you want to use if you want to more easily idenntify this tunnel later.
         * To ensure the tunnel doesn't already exist run: 
@@ -60,39 +60,49 @@ Prerequisites:“File Editor” add-on.
             * This must exactly match the domain you are creating.
             * It cannot be more than one subdomain deep. h.example.com is fine. h.a.example.com is not.
 
+    * service (default: "http://hassio:8123")    
+        * The location of your hassio web interface.
+        * NOTE: Works best if changed to an IP. Name based resolution from add-ons can be flaky. If you get bad gateway errors after installing change this to the static IP of your installation instead of the hostname
+        * *CANNOT* end in a "/"
     
+    * hostname[2|3] and service[2|3]
+        * Advanced use. Leave empty for basic Cloudflare Argo installations.
+        * Allows making the tunnel available at multiple subdomains
+        * Can point to separate services. (For example, SSH)
+    
+    * addconfig
+        * Advanced use. Leave empty for basic Cloudflare Argo installations.
+        * Takes a path and appends its contents to the internal tunnel config.yml file.
 
-The basic config enables 1 Cloudflare Argo tunnel using:
-certificate ( sign-up via https://www.cloudflare.com/a/warp upload to /config and put the path here )
+6. Start the add-on.
 
-hostname
-service
+7. After a minute run "cloudflared tunnel list" on your local machine. If you see the tunnel you created...  Success! (But not quite finished)
 
-The addon supports 3 tunnels using the additional configuration values:
-hostname2
-service2
+8. If your tunnel isn't being created check the add-on log for potential problems. If you see messages about the tunnel already existing you'll need to delete your cf-argo directory, run "cloudflared tunnel delete \<tunnel_name\>" and restart the service.
 
-hostname3
-service3
+9. Copy the tunnelID UUID. It is in the log file at 
+
+    "Starting tunnel tunnelID=xxxxxxxxxxx"
+    
+    or 
+
+    Copy it from the "cloudflared tunnel list" output
+
+10. Create a CNAME for your domain that points to \<UUID\>.cfargotunnel.com
+
+    ![Cloudflare dashboard](dns-record.png "Title")
+
+    * This CNAME must exactly match the hostname you configure.
+    * The \<UUID\>.cfargotunnel.com is not directly routable from the internet, it is only reachable through Cloudflare's internal network through this CNAME.
+
+## Re-configuration and troubleshooting
+
+To make configuration changes:
+* Stop the service
+* Delete the /config/cf-argo directory
+* Start again from Step 5
 
 
-When you leave hostname2 and 3 blank they will not be compiled into settings
-
-You'll need to sign up for Argo with Cloudflare directly and generate an SSL certificate at the following url:
-https://www.cloudflare.com/a/warp
-
-The add-config value allows you to pull in further routes from a specific file.
-
-## Multiple Domains
-Currently for this new version of Argo multiple domains are not supported.
-
-## Still more to do :(
-With the new version of Cloudflare they also want you to configure a domain name via the UI.
-
-To do this you'll need to create a CNAME pointing to your <Tunnel ID>.cfargotunnel.com
-
-To find your funnel ID check the logs for:
-Starting tunnel tunnelID=<ID>
 
 <https://github.com/hassio-addons/repository>
 
