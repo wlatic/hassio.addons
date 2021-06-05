@@ -18,7 +18,49 @@ Cloudflare Argo uses a tunnel and therefore bypasses any need for a NAT'd public
 
 I created the addon as an alternative to Nabu Casa (You should subscribe to them anyway as it funds Home Assistant Development) as I dont like using anything I cant control myself. I believe they use a reverse proxy for their setup.
 
-## CONFIG
+## Overview
+
+Cloudflare considers tunnels created using 1.x versions of this add-on "legacy" tunnels. Version 2.x+ uses the updated configuration method which is slightly more involved. The biggest difference is that new Argo tunnels generate a \<uuid\>.cfargotunnel.com entry in Cloudflare's internal network and you will need to point a CNAME DNS entry at it. "Legacy" Cloudflare Argo tunnels did this all in one step.
+
+## Setup
+
+Prerequisites:“File Editor” add-on.
+
+1. Install the Cloudflare Argo add-on but do not start it.
+
+2. Install cloudflared on your local machine. https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation
+
+3. Authenticate your local cloudflared instance by running: 
+
+    cloudflared tunnel login
+
+4. Copy the generated cert.pem file from ~/.cloudflared/cert.pem to your hassio instance at */config/cert/argo.pem*
+
+5. Configure the add-on
+    * certificate
+        * Leave as default if certificate located at /config/cert/argo.pem
+    * tunnel_name (default: "homeassistant")
+        * The internal Cloudflareidentifier for your tunnel. It will not be publicly visible.
+        * The name *MUST* be unique for your Cloudflare account. 
+        * The name *CAN* be the same as the subdomain you want to use if you want to more easily idenntify this tunnel later.
+        * To ensure the tunnel doesn't already exist run: 
+             
+            cloudflared tunnel list
+        
+            If it exists and you want to recreate it run 
+            
+            cloudflared tunnel delete \<tunnel_name\>
+
+    * hostname
+        * Enter the the FQDN of the Argo tunnel you are trying to create. Example:
+
+            homeassistant.example.com
+
+        * Notes:
+            * This must exactly match the domain you are creating.
+            * It cannot be more than one subdomain deep. h.example.com is fine. h.a.example.com is not.
+
+    
 
 The basic config enables 1 Cloudflare Argo tunnel using:
 certificate ( sign-up via https://www.cloudflare.com/a/warp upload to /config and put the path here )
