@@ -3,7 +3,7 @@
 	"version": "2.1",
 	"slug": "argocloudflare",
 	"description": "Argo for Home Assistant",
-	"url": "https://github.com/wlatic/hassio.addons/blob/master/cloudflareargo/readme.md",
+	"url": "https://github.com/wlatic/hassio.addons/blob/master/addon-cloudflare-argo/README.md",
 	"ingress": false,
 	"panel_icon": "mdi:docker",
 	"homeassistant": "0.104.0",
