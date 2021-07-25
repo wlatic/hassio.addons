@@ -1,6 +1,8 @@
-# Hassio Custom Addon: CloudFlare Argo
+# Community Hass.io Add-ons: CloudFlare Argo
 
-Setup Cloudflare Argo containers with ease! <br />
+Setup Cloudflare Argo containers with ease!
+
+
 ![Project Stage][project-stage-shield]
 [![License][license-shield]](LICENSE.md)
 
@@ -12,48 +14,43 @@ Setup Cloudflare Argo containers with ease! <br />
 
 ## About
 
-This is a very simple setup of Cloudflare argo that helps people access their Home Assistant and other HassOS addons via a public URL.
+This is a very hacky setup of Cloudflare argo that helps people access their Home Assistant and other HassOS addons via a public URL.
 
 Cloudflare Argo uses a tunnel and therefore bypasses any need for a NAT'd public IP (LTE connections) or opening firewall ports etc.
-
-I created the addon as an alternative to Nabu Casa (You should subscribe to them anyway as it funds Home Assistant Development) as I dont like using anything I cant control myself. I believe they use a reverse proxy for their setup.
 
 ## CONFIG
 
 The basic config enables 1 Cloudflare Argo tunnel using:
-certificate ( sign-up via https://www.cloudflare.com/a/warp upload to /config and put the path here )
 
-hostname
-service
+Hostname (The hostname to pass to Cloudflare)
+URL (The local url you want to put online)
+Certificate (local path to the Cloudflare Argo Certificate)
 
 The addon supports 3 tunnels using the additional configuration values:
 hostname2
-service2
+url2
+certificate2
 
 hostname3
-service3
+url3
+certificate3
 
-
-When you leave hostname2 and 3 blank they will not be compiled into settings
+If you do not configure tunnel 2 and 3 it will not run.
 
 You'll need to sign up for Argo with Cloudflare directly and generate an SSL certificate at the following url:
 https://www.cloudflare.com/a/warp
 
-The add-config value allows you to pull in further routes from a specific file.
+## Home Assistant Config
+As of the newest updates HA also needs to be told to allow proxies, the following is an example of what should be added to your config to avoid 400: bad request issues
+
+http:
+  trusted_proxies: 172.30.32.0/23
+  use_x_forwarded_for: true
 
 ## Multiple Domains
-Currently for this new version of Argo multiple domains are not supported.
+By default a .pem file from Cloudflare only allows access from a single domain name, if you want multiple domains you'll need multiple .pem files.
 
-## Still more to do :(
-With the new version of Cloudflare they also want you to configure a domain name via the UI.
-
-To do this you'll need to create a CNAME pointing to your <Tunnel ID>.cfargotunnel.com
-
-To find your funnel ID check the logs for:
-Starting tunnel tunnelID=<ID>
-
-<https://github.com/hassio-addons/repository>
-
+Even if you are using the same .pem file for all tunnels you'll need to specify certificate2 and certificate3.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
