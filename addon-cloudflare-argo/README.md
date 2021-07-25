@@ -40,6 +40,13 @@ If you do not configure tunnel 2 and 3 it will not run.
 You'll need to sign up for Argo with Cloudflare directly and generate an SSL certificate at the following url:
 https://www.cloudflare.com/a/warp
 
+## Home Assistant Config
+As of the newest updates HA also needs to be told to allow proxies, the following is an example of what should be added to your config to avoid 400: bad request issues
+
+http:
+  trusted_proxies: 172.30.32.0/23
+  use_x_forwarded_for: true
+
 ## Multiple Domains
 By default a .pem file from Cloudflare only allows access from a single domain name, if you want multiple domains you'll need multiple .pem files.
 
