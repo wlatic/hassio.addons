@@ -17,7 +17,9 @@ RUN \
 
 && apk add libc6-compat \
 
-&& if [[ "$ARCH" = "arm64" ]]; then mkdir /etc/cloudflared && curl -L -s -o /opt/cloudflared "https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64" && chmod +x /opt/cloudflared; else mkdir /etc/cloudflared && curl -L -s "https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-${ARCH}.tgz" | tar xzf - -C /opt/ && chmod +x /opt/cloudflared;  fi 
+# Old Code && if [[ "$ARCH" = "arm64" ]]; then mkdir /etc/cloudflared && curl -L -s -o /opt/cloudflared "https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64" && chmod +x /opt/cloudflared; else mkdir /etc/cloudflared && curl -L -s "https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-${ARCH}.tgz" | tar xzf - -C /opt/ && chmod +x /opt/cloudflared;  fi 
+
+&& mkdir /etc/cloudflared && curl -L -s -o /opt/cloudflared "https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-${ARCH}" && chmod +x /opt/cloudflared 
 
 COPY rootfs /
 
