@@ -12,6 +12,6 @@ certificate=$(bashio::config 'certificate')
 bashio::log.info "Starting CloudFlare Argo"
 
 # / Check URL
-exec /opt/cloudflared --origincert=${certificate} tunnel --config=/config/cf-argo/config.yml run
+exec /opt/cloudflared --no-tls-verify --origincert=${certificate} tunnel --config=/config/cf-argo/config.yml run
 
 Sleep 15
