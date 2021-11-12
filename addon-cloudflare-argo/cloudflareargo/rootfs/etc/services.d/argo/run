@@ -5,14 +5,20 @@
 # ==============================================================================
 declare -a options
 declare certificate 
+declare service
+declare service2
+declare service3
 
+service=$(bashio::config 'service')
+service2=$(bashio::config 'service2')
+service3=$(bashio::config 'service3')
 certificate=$(bashio::config 'certificate')
 
 
 bashio::log.info "Starting CloudFlare Argo"
 
 # / Check URL
-exec /opt/cloudflared --no-tls-verify true --origin-server-name ${service1},${service2},${service3} --origincert=${certificate} tunnel --config=/config/cf-argo/config.yml run
-#exec /opt/cloudflared --no-tls-verify --origin-server-name ${service1} if bashio::config.has_value 'hostname2'; then ,${service2} fi if bashio::config.has_value 'hostname3'; then ,${service3} fi --origincert=${certificate} tunnel --config=/config/cf-argo/config.yml run
+exec /opt/cloudflared --no-tls-verify true --origin-server-name ${service},${service2},${service3} --origincert=${certificate} tunnel --config=/config/cf-argo/config.yml run
+#exec /opt/cloudflared --no-tls-verify --origin-server-name ${service} if bashio::config.has_value 'hostname2'; then ,${service2} fi if bashio::config.has_value 'hostname3'; then ,${service3} fi --origincert=${certificate} tunnel --config=/config/cf-argo/config.yml run
 
 Sleep 15
