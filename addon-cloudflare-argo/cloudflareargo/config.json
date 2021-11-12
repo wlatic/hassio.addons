@@ -1,6 +1,6 @@
 {
 	"name": "Cloudflare Argo",
-	"version": "2.1",
+	"version": "2.2",
 	"slug": "argocloudflare",
 	"description": "Argo for Home Assistant",
 	"url": "https://github.com/wlatic/hassio.addons/blob/master/addon-cloudflare-argo/README.md",
@@ -22,11 +22,14 @@
 		"certificate": "/config/cert/argo.pem",
 		"tunnel_name": "homeassistant",
 		"hostname": "host",
-		"service": "http://hassio:8123",
+		"service": "http://homeassistant:8123",
+		"selfsigned": "False",
 		"hostname2": "null",
 		"service2": "null",
+		"selfsigned2": "False",
 		"hostname3": "null",
 		"service3": "null",
+		"selfsigned3": "False",
 		"addconfig": "null"
 	},
 	"schema": {
@@ -34,10 +37,13 @@
 		"tunnel_name": "str",
 		"hostname": "str",
 		"service": "str",
+		"selfsigned": "bool",
 		"hostname2": "str",
 		"service2": "str",
+		"selfsigned2": "bool",
 		"hostname3": "str",
 		"service3": "str",
+		"selfsigned3": "bool",
 		"addconfig": "str"
 	}
 }
