@@ -27,20 +27,27 @@ URL (The local url you want to put online)
 Certificate (local path to the Cloudflare Argo Certificate)
 
 The addon supports 3 tunnels using the additional configuration values:
-hostname2
-url2
-certificate2
+```
+- hostname: hostname2
+  service: service2
+  #if self signed certificate
+  originRequest:
+    noTLSVerify: true
 
-hostname3
-url3
-certificate3
+- hostname: hostname3
+  service: service3
+  #if self signed certificate
+  originRequest:
+    noTLSVerify: true
+```
 
-If you do not configure tunnel 2 and 3 it will not run.
+If you do not configure hostname/service 2 and 3 it will not run.
 
 You'll need to sign up for Argo with Cloudflare directly and generate an SSL certificate at the following url:
 https://www.cloudflare.com/a/warp
 
 ## Home Assistant Config
+
 As of the newest updates HA also needs to be told to allow proxies, the following is an example of what should be added to your config to avoid 400: bad request issues
 
 ```
@@ -50,6 +57,7 @@ http:
 ```
 
 ## Multiple Domains
+
 By default a .pem file from Cloudflare only allows access from a single domain name, if you want multiple domains you'll need multiple .pem files.
 
 Even if you are using the same .pem file for all tunnels you'll need to specify certificate2 and certificate3.
