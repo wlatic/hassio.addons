@@ -1,6 +1,6 @@
 {
 	"name": "Cloudflare Argo",
-	"version": "2.2",
+	"version": "2.2.1",
 	"slug": "argocloudflare",
 	"description": "Argo for Home Assistant",
 	"url": "https://github.com/wlatic/hassio.addons/blob/master/cloudflareargo/readme.md",
