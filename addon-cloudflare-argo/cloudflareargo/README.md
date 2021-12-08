@@ -22,18 +22,18 @@ Cloudflare Argo uses a tunnel and therefore bypasses any need for a NAT'd public
 
 The basic config enables 1 Cloudflare Argo tunnel using:
 
-Hostname (The hostname to pass to Cloudflare)
-URL (The local url you want to put online)
-Certificate (local path to the Cloudflare Argo Certificate)
+- Hostname (The hostname to pass to Cloudflare)
+- URL (The local url you want to put online)
+- Certificate (local path to the Cloudflare Argo Certificate)
 
 The addon supports 3 tunnels using the additional configuration values:
-hostname2
-url2
-certificate2
+- hostname2
+- url2
+- certificate2
 
-hostname3
-url3
-certificate3
+- hostname3
+- url3
+- certificate3
 
 If you do not configure tunnel 2 and 3 it will not run.
 
@@ -41,11 +41,13 @@ You'll need to sign up for Argo with Cloudflare directly and generate an SSL cer
 https://www.cloudflare.com/a/warp
 
 ## Home Assistant Config
-As of the newest updates HA also needs to be told to allow proxies, the following is an example of what should be added to your config to avoid 400: bad request issues
+As of the newest updates HA also needs to be told to allow proxies, the following is an example of what should be added to your config to avoid `400: bad request` issues:
 
+```yaml
 http:
   trusted_proxies: 172.30.32.0/23
   use_x_forwarded_for: true
+```
 
 ## Multiple Domains
 By default a .pem file from Cloudflare only allows access from a single domain name, if you want multiple domains you'll need multiple .pem files.
