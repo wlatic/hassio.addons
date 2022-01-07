@@ -1,0 +1,6 @@
+name: "TP Link - Omada"
+description: "Controller for Omada"
+version: "1.0.0"
+slug: "tplinkomada"
+arch:
+  - armv7
