@@ -17,3 +17,4 @@
 1.7 Updated file that ARM64 downloads so its always the latest version
 2.0 Change away from Legacy Argo, Unfortunately that means lots of breaking changes.
 2.0.1 Changed URL for downloading CloudflareD
+0.00 Addon Deperciated for https://github.com/brenner-tobias/addon-cloudflared
