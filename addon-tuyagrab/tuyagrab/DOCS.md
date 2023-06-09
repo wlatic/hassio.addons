@@ -17,7 +17,7 @@ Tuya has an [official document](https://developer.tuya.com/en/docs/iot/open-api/
 
 - You can now click the name of the project you just setup and you'll see the following info:
 
-Access ID = TuyaKey
+Access ID = TuyaKey<br />
 Access Secret = Tuyasecret
 
 - Next Click Cloud > Link Devices > Link Devices By App Account > Add App account (this will show a barcode on screen)
