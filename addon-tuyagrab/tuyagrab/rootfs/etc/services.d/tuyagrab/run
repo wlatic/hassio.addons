@@ -21,6 +21,6 @@ bashio::log.info "Starting Tuya Device Capture"
 json='{"apiKey": "'"${tuyakey}"'", "apiDeviceID": "'"${tuyadevice}"'", "apiSecret": "'"${tuyasecret}"'", "apiRegion": "'"${tuyaregion}"'" }'
 cd /opt
 echo $json > tinytuya.json
-(echo "y"; sleep 10; echo "n") |  python3 -m tinytuya wizard 2>&1 | tee /config/tuyadevices.txt 
+(echo "y"; sleep 10; echo "n";) |  python3 -m tinytuya wizard 2>&1 | tee /config/tuyadevices.txt 
 
 sleep ${refreshtime}
