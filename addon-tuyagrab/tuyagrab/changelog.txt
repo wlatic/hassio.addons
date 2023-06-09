@@ -5,3 +5,4 @@
 0.5 added schema
 0.6 taken away the file going into www/local as it was insecure. Now just outputs to the log + stores in a file within /config
 0.7 Removed versions from packages.
+0.8 Really poorly coded changes to get the txt file to generate.
