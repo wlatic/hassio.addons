@@ -29,5 +29,5 @@
     "SYS_ADMIN", 
     "NET_ADMIN"
   ],
-  "protection_mode": true
+  "protection_mode": false
 }
