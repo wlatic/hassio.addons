@@ -1,0 +1,16 @@
+{
+  "name": "Komodo Addon",
+  "version": "0.0.1",
+  "slug": "komodo_addon",
+  "description": "Addon to run the Periphery service for Komodo",
+  "arch": ["amd64", "arm64"],
+  "startup": "services",
+  "boot": "auto",
+  "ports": {
+    "8120/tcp": 8120
+  },
+  "map": ["config:rw", "ssl:rw"],
+  "options": {},
+  "schema": {},
+  "image": "local/periphery_addon"
+}
