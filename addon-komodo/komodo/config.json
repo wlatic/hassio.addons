@@ -12,7 +12,7 @@
   "map": [
     "config:rw",
     "ssl:rw",
-    "docker:rw"  // Allow access to Docker socket
+    "docker:rw"
   ],
   "options": {
     "include_disk_mounts": "/etc/hostname"
