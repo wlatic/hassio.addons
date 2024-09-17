@@ -12,5 +12,6 @@
   "map": ["config:rw", "ssl:rw"],
   "options": {},
   "schema": {},
-  "image": "local/periphery_addon"
+  "image": "local/periphery_addon",
+  "restart": "on-failure"
 }
