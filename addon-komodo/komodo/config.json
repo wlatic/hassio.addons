@@ -9,9 +9,25 @@
   "ports": {
     "8120/tcp": 8120
   },
-  "map": ["config:rw", "ssl:rw"],
-  "options": {},
-  "schema": {},
+  "map": [
+    "config:rw",
+    "ssl:rw",
+    "docker:rw"  // Allow access to Docker socket
+  ],
+  "options": {
+    "include_disk_mounts": "/etc/hostname"
+  },
+  "schema": {
+    "include_disk_mounts": "str"
+  },
+  "environment": {
+    "PERIPHERY_INCLUDE_DISK_MOUNTS": "/etc/hostname"
+  },
+  "volumes": [
+    "/var/run/docker.sock:/var/run/docker.sock",
+    "repos:/etc/komodo/repos",
+    "stacks:/etc/komodo/stacks"
+  },
   "image": "ghcr.io/mbecker20/periphery:latest",
   "restart": "unless-stopped"
 }
