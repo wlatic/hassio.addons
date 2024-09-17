@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "slug": "komodo_addon",
   "description": "Addon to run the Periphery service for Komodo",
-  "arch": ["amd64", "arm64"],
+ "arch": ["aarch64", "amd64"],
   "startup": "services",
   "boot": "auto",
   "ports": {
