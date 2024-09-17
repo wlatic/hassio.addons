@@ -26,8 +26,12 @@
   ],
   "restart": "unless-stopped",
   "privileged": [
-    "SYS_ADMIN", 
-    "NET_ADMIN"
+    "SYS_ADMIN"
   ],
-  "protection_mode": false
+  "protection_mode": false,
+  "hassio_api": true,
+  "docker_api": true,
+  "ingress": true,
+  "advanced": true
+}
 }
