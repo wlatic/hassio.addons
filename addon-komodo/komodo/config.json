@@ -14,12 +14,8 @@
     "ssl:rw",
     "docker:rw"
   ],
-  "options": {
-    "include_disk_mounts": "/etc/hostname"
-  },
-  "schema": {
-    "include_disk_mounts": "str"
-  },
+  "options": {},
+  "schema": {},
   "environment": {
     "PERIPHERY_INCLUDE_DISK_MOUNTS": "/etc/hostname"
   },
@@ -27,7 +23,7 @@
     "/var/run/docker.sock:/var/run/docker.sock",
     "repos:/etc/komodo/repos",
     "stacks:/etc/komodo/stacks"
-  },
+  ],
   "image": "ghcr.io/mbecker20/periphery:latest",
   "restart": "unless-stopped"
 }
