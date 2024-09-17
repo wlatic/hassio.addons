@@ -24,5 +24,9 @@
     "repos:/etc/komodo/repos",
     "stacks:/etc/komodo/stacks"
   ],
-  "restart": "unless-stopped"
+  "restart": "unless-stopped",
+  "homeassistant": "true",
+  "host_network": false,
+  "privileged": false,
+  "protection_mode": true
 }
