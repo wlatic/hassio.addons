@@ -12,6 +12,6 @@
   "map": ["config:rw", "ssl:rw"],
   "options": {},
   "schema": {},
-  "image": "local/periphery_addon",
-  "restart": "on-failure"
+  "image": "ghcr.io/mbecker20/periphery:latest",
+  "restart": "unless-stopped"
 }
