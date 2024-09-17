@@ -25,8 +25,9 @@
     "stacks:/etc/komodo/stacks"
   ],
   "restart": "unless-stopped",
-  "homeassistant": "true",
-  "host_network": false,
-  "privileged": false,
+  "privileged": [
+    "SYS_ADMIN", 
+    "NET_ADMIN"
+  ],
   "protection_mode": true
 }
