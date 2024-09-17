@@ -15,7 +15,8 @@ RUN \
   && curl -L -s -o /opt/periphery "https://github.com/mbecker20/periphery/releases/download/latest/periphery-linux-${ARCH}" \
   && chmod +x /opt/periphery
 
-# Copy application files
-COPY rootfs /
+# Copy all files in rootfs to the root filesystem of the container
+COPY rootfs/ /
 
+# Command to run when starting the container
 CMD ["/opt/periphery"]
