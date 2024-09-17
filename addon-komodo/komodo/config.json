@@ -1,9 +1,9 @@
 {
-  "name": "Komodo Addon",
-  "version": "0.0.1",
-  "slug": "komodo_addon",
+  "name": "Komodo Periphery Addon",
+  "version": "0.1.0",
+  "slug": "komodo_periphery_addon",
   "description": "Addon to run the Periphery service for Komodo",
- "arch": ["aarch64", "amd64"],
+  "arch": ["aarch64", "amd64"],
   "startup": "services",
   "boot": "auto",
   "ports": {
@@ -12,5 +12,6 @@
   "map": ["config:rw", "ssl:rw"],
   "options": {},
   "schema": {},
+  "image": "ghcr.io/mbecker20/periphery:latest",
   "restart": "unless-stopped"
 }
