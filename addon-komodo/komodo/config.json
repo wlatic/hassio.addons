@@ -24,6 +24,5 @@
     "repos:/etc/komodo/repos",
     "stacks:/etc/komodo/stacks"
   ],
-  "image": "ghcr.io/mbecker20/periphery:latest-aarch64",
   "restart": "unless-stopped"
 }
