@@ -1,0 +1,18 @@
+version: '3'
+services:
+  periphery:
+    image: ghcr.io/mbecker20/periphery:latest
+    logging:
+      driver: local
+    ports:
+      - "8120:8120"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - repos:/etc/komodo/repos
+      - stacks:/etc/komodo/stacks
+    environment:
+      PERIPHERY_INCLUDE_DISK_MOUNTS: /etc/hostname
+
+volumes:
+  repos:
+  stacks:
