@@ -1,8 +1,8 @@
-name: Corosync QNetd
+name: Corosync Device
 version: dev
-slug: corosync_qnetd
-description: Corosync Quorum Network Daemon for Proxmox Quorum
-url: https://github.com/modelrockettier/corosync-qnetd
+slug: corosync_device
+description: Corosync QDevice for Proxmox 2-node Cluster
+url: https://github.com/safhdev/corosyncdevice
 arch:
   - aarch64
   - amd64
@@ -13,5 +13,13 @@ map:
   - addon_config:rw
 ports:
   5403/tcp: 5403
+  22/tcp: 22
 ports_description:
   5403/tcp: Corosync QNetd port
+  22/tcp: SSH port
+options:
+  password: "Passw0rd!"
+schema:
+  password: str
+environment:
+  passwd: "!secret options.password"
