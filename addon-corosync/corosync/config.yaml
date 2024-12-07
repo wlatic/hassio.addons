@@ -10,7 +10,7 @@ init: false
 startup: services
 host_network: true
 map:
-  - addon_config:/etc/corosync:rw
+  - addon_config:rw
 ports:
   5403/tcp: 5403
 ports_description:
