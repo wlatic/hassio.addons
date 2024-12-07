@@ -1,24 +1,18 @@
 name: Corosync QNetD
-version: "latest"
+version: "latest"  # or specific version if available
 slug: corosync-qnetd
-description: Docker container for Proxmox Corosync QNet Daemon
-url: "https://github.com/modelrockettier/docker-corosync-qnetd"
-startup: services
-init: false
+description: "Docker container for Proxmox Corosync QNet Daemon"
 arch:
+  - armhf
+  - armv7
   - aarch64
   - amd64
-  - armv7
-  - armhf
   - i386
-host_network: true  # Assuming this service needs network access
-map:
-  - config:rw  # Mapping for configuration files if needed
+url: "https://github.com/modelrockettier/docker-corosync-qnetd"
+init: false
+ports:
+  5403/tcp: 5403
 options:
   qnetd_data: /etc/corosync
 schema:
-  log_level: list(trace|debug|info|notice|warning|error|fatal)?
   qnetd_data: str
-ports:
-  5403/tcp: 5403  # Example port for corosync-qnetd
-image: modelrockettier/corosync-qnetd:latest  # Assuming this is the image name
