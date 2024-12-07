@@ -17,4 +17,4 @@ schema:
   qnetd_data: str
 ports:
   5403/tcp: 5403
-image: modelrockettier/corosync-qnetd:arm64v8
+image: ghcr.io/modelrockettier/corosync-qnetd:arm64v8
