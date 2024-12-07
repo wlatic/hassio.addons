@@ -1,9 +1,9 @@
 ARG BUILD_FROM
-FROM modelrockettier/corosync-qnetd:arm64v8
+FROM safhdev/corosyncdevice:debianlatest
 
 LABEL \
-    io.hass.name="Corosync QNetd" \
-    io.hass.description="Corosync Quorum Network Daemon for Proxmox Quorum" \
+    io.hass.name="Corosync Device" \
+    io.hass.description="Corosync QDevice for Proxmox 2-node Cluster" \
     io.hass.type="addon" \
     io.hass.version="dev" \
     io.hass.arch="${BUILD_ARCH}"
