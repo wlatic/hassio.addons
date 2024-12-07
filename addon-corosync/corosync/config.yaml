@@ -1,5 +1,5 @@
 name: Corosync QNetd
-version: "1.0.0"
+version: dev
 slug: corosync_qnetd
 description: Corosync Quorum Network Daemon for Home Assistant
 url: https://github.com/modelrockettier/corosync-qnetd
@@ -8,9 +8,6 @@ arch:
   - amd64
 init: false
 startup: services
-panel_icon: mdi:lan-connect
-ingress: false
-host_network: true
 map:
   - ssl
   - share:rw
@@ -18,17 +15,3 @@ ports:
   5403/tcp: 5403
 ports_description:
   5403/tcp: QNetd service port
-options:
-  ssl: true
-  certfile: fullchain.pem
-  keyfile: privkey.pem
-  system_packages: []
-  init_commands: []
-schema:
-  ssl: bool
-  certfile: str
-  keyfile: str
-  system_packages:
-    - str
-  init_commands:
-    - str
