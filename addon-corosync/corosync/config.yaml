@@ -11,14 +11,14 @@ arch:
   - armv7
   - armhf
   - i386
-host_network: true  # Assuming this service needs network access
+host_network: true
 map:
-  - config:rw  # Mapping for configuration files if needed
+  - config:rw
 options:
   qnetd_data: /etc/corosync
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   qnetd_data: str
 ports:
-  5403/tcp: 5403  # Example port for corosync-qnetd
-image: modelrockettier/corosync-qnetd:latest  # Assuming this is the image name
+  5403/tcp: 5403
+image: modelrockettier/corosync-qnetd:{arch}  # Use this when specifying arch in the image name dynamically
