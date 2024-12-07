@@ -15,3 +15,5 @@ ports:
   5403/tcp: 5403
 ports_description:
   5403/tcp: QNetd service port
+user: "903"
+group: "903"
