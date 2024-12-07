@@ -1,20 +1,18 @@
-name: Corosync QNetD
-version: "latest"
-slug: corosync-qnetd
-description: Docker container for Proxmox Corosync QNet Daemon
-url: "https://github.com/modelrockettier/docker-corosync-qnetd"
-startup: services
-init: false
+name: "Corosync QNetd"
+version: "1.0.0"
+slug: "corosync_qnetd"
+description: "Corosync Quorum Network Daemon for Home Assistant"
+url: "https://github.com/modelrockettier/corosync-qnetd"
 arch:
   - aarch64
-host_network: true
-map:
-  - config:rw
-options:
-  qnetd_data: /etc/corosync
-schema:
-  log_level: list(trace|debug|info|notice|warning|error|fatal)?
-  qnetd_data: str
+startup: services
+boot: auto
+init: false
 ports:
   5403/tcp: 5403
-image: modelrockettier/corosync-qnetd:arm64v8
+schema:
+  port: "int?"
+ports_description:
+  5403/tcp: "QNetd service port"
+options:
+  port: 5403
