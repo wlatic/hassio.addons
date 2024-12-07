@@ -7,10 +7,6 @@ startup: services
 init: false
 arch:
   - aarch64
-  - amd64
-  - armv7
-  - armhf
-  - i386
 host_network: true
 map:
   - config:rw
@@ -21,4 +17,4 @@ schema:
   qnetd_data: str
 ports:
   5403/tcp: 5403
-image: modelrockettier/corosync-qnetd:{arch}  # Use this when specifying arch in the image name dynamically
+image: modelrockettier/corosync-qnetd:arm64v8
