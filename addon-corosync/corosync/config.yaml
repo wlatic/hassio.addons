@@ -1,21 +1,17 @@
 name: Corosync QNetd
 version: dev
 slug: corosync_qnetd
-description: Corosync Quorum Network Daemon for Home Assistant
+description: Corosync Quorum Network Daemon for Proxmox Quorum
 url: https://github.com/modelrockettier/corosync-qnetd
 arch:
   - aarch64
   - amd64
 init: false
 startup: services
+host_network: true
 map:
-  - ssl
-  - share:rw
+  - addon_config:/etc/corosync:rw
 ports:
   5403/tcp: 5403
 ports_description:
-  5403/tcp: QNetd service port
-user: "903"
-group: "903"
-volumes:
-  etc_corosync: /etc/corosync
+  5403/tcp: Corosync QNetd port
