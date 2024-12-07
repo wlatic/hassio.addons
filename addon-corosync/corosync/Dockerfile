@@ -1,5 +1,5 @@
 ARG BUILD_FROM
-FROM modelrockettier/corosync-qnetd:latest
+FROM modelrockettier/corosync-qnetd:arm64v8
 
 # If you need to run any additional commands or adjust the environment, you can do so here.
 # For example, setting environment variables or user permissions.
