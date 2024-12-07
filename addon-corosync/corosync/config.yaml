@@ -17,3 +17,5 @@ ports_description:
   5403/tcp: QNetd service port
 user: "903"
 group: "903"
+volumes:
+  etc_corosync: /etc/corosync
