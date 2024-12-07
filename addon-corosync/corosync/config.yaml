@@ -8,15 +8,15 @@ arch:
   - amd64
 init: false
 startup: services
-host_network: true
 map:
   - addon_config:rw
 ports:
-  5403/tcp: 5403
-  22/tcp: 22
+  5403/tcp: null
+  22/tcp: null
 ports_description:
   5403/tcp: Corosync QNetd port
   22/tcp: SSH port
+host_network: false
 options:
   password: "Passw0rd!"
 schema:
