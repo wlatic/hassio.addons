@@ -1,0 +1,5 @@
+---
+build_from:
+  aarch64: modelrockettier/corosync-qnetd:arm64v8
+  amd64: modelrockettier/corosync-qnetd:latest
+  armv7: modelrockettier/corosync-qnetd:arm32v7
