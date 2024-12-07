@@ -1,0 +1,1 @@
+FROM modelrockettier/corosync-qnetd
