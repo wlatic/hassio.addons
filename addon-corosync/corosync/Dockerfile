@@ -1,17 +1,13 @@
 ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM modelrockettier/corosync-qnetd:latest
 
-# Set shell
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+# If you need to run any additional commands or adjust the environment, you can do so here.
+# For example, setting environment variables or user permissions.
 
-# Install requirements for add-on
-RUN \
-    apk add --no-cache \
-        corosync-qnetd
+# No need for a run.sh script if the container's default command works for you. 
+# If you need one for some reason, you can add:
+# COPY run.sh /
+# RUN chmod a+x /run.sh
+# CMD [ "/run.sh" ]
 
-# Copy data for add-on
-COPY run.sh /
-RUN chmod a+x /run.sh
-
-# Execute run.sh script
-CMD [ "/run.sh" ]
+# However, since the Docker image already has its CMD set, we'll leave these commented out.
